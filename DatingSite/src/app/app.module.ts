@@ -10,6 +10,7 @@ import { TesterComponentComponent } from './components/tester-component/tester-c
 import { SigninComponentComponent } from './components/signin-component/signin-component.component';
 import { FooterComponentComponent } from './components/footer-component/footer-component.component';
 import { ContactComponentComponent } from './components/contact-component/contact-component.component';
+import { MyProfileComponentComponent } from './components/my-profile-component/my-profile-component.component';
 
 
 @NgModule({
@@ -20,8 +21,7 @@ import { ContactComponentComponent } from './components/contact-component/contac
     TesterComponentComponent,
     SigninComponentComponent,
     FooterComponentComponent,
-    ContactComponentComponent,
-    
+    ContactComponentComponent
   ],
   imports: [
     BrowserModule,
