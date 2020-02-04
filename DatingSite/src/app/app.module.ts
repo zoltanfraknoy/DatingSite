@@ -11,6 +11,7 @@ import { SigninComponentComponent } from './components/signin-component/signin-c
 import { FooterComponentComponent } from './components/footer-component/footer-component.component';
 import { ContactComponentComponent } from './components/contact-component/contact-component.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { ContactComponentComponent } from './components/contact-component/contac
     TesterComponentComponent,
     SigninComponentComponent,
     FooterComponentComponent,
-    ContactComponentComponent
+    ContactComponentComponent,
+    
   ],
   imports: [
     BrowserModule,
