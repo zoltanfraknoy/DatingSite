@@ -905,7 +905,7 @@ form .form-group textarea { resize: vertical; }
 
 .divider, .divider-2, .divider-3{position: relative; display: inline-block; padding-bottom: 20px;}
 .divider, .divider-2{padding-bottom: 35px;}
-.divider:before, .divider-2:before, .divider-3:before{content: ""; position: absolute;  bottom:0; display: inline-block; left: 50%; margin-left: -118px;}
+.divider:before, .divider-2:before, .divider-3:before{content: ""; position: absolute;  bottom:0; display: inline-block; left: 50%; margin-left: -48px;}
 .divider:before{background: url(src/assets/images/divider-customizer/divider-skin-default.png) no-repeat 0 0; width: 236px; height: 18px;}
 .divider-2:before{background: url(src/assets/images/divider-customizer-2/divider-skin-default.png) no-repeat 0 0; width: 236px; height: 25px;}
 .divider-3:before{background: url(src/assets/images/divider-customizer-3/divider-skin-default.png) no-repeat 0 0; margin-left: -48px; width: 97px; height: 3px;}
@@ -1158,6 +1158,7 @@ form .form-group .checkbox label, form .form-group .radio label { padding-left: 
     .banner-form form .form-group select.form-control{padding: 0 10px;}
 
     /* Safari 5+ ONLY */
+
     ::i-block-chrome, .timeline > li:last-child:after{bottom: -30px;}
 }
 
