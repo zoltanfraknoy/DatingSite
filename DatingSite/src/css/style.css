@@ -56,7 +56,7 @@ Design and Developed by: potenzaglobalsolutions.com
 .loading-effect img {width: 300px;}
 
 .mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close{display:none;}
-.mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close{cursor: url(../images/close.png) 25 25, pointer;}
+.mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close{cursor: url(assets/images/close.png) 25 25, pointer;}
 
 /*---------------------------------------------------------------------
   Header 
@@ -605,7 +605,7 @@ Action-box Page
 /* Animation Key */
 /*==================================================================================*/
 .bg-effect:before{-webkit-animation-name:fadebounce;-moz-animation-name:fadebounce;-ms-animation-name:fadebounce;-o-animation-name:fadebounce;animation-name:fadebounce;-webkit-animation-duration:3s;-moz-animation-duration:3s;-ms-animation-duration:3s;-o-animation-duration:3s;animation-duration:3s;-webkit-animation-iteration-count:infinite;-moz-animation-iteration-count:infinite;-ms-animation-iteration-count:infinite;-o-animation-iteration-count:infinite;animation-iteration-count:infinite}
-v@-moz-keyframes fadebounce{
+@-moz-keyframes fadebounce{
   0%{-moz-transform:translateY(0);transform:translateY(0);opacity:1}
   50%{-moz-transform:translateY(25px);transform:translateY(25px);opacity:1}
   100%{-moz-transform:translateY(0);transform:translateY(0);opacity:1}
