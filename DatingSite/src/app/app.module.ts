@@ -10,6 +10,8 @@ import { TesterComponentComponent } from './components/tester-component/tester-c
 import { SigninComponentComponent } from './components/signin-component/signin-component.component';
 import { FooterComponentComponent } from './components/footer-component/footer-component.component';
 import { ContactComponentComponent } from './components/contact-component/contact-component.component';
+import { LoginComponentComponent } from './components/login-component/login-component.component';
+import { ErrorPageComponent } from './components/error-page/error-page.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { ContactComponentComponent } from './components/contact-component/contac
     TesterComponentComponent,
     SigninComponentComponent,
     FooterComponentComponent,
-    ContactComponentComponent
+    ContactComponentComponent,
+    LoginComponentComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,
