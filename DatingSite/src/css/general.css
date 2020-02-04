@@ -2,7 +2,7 @@
 
 Template: Cupid Love Dating HTML5 Template
 Author: potenzaglobalsolutions.com
-Version: 1.0  
+Version: 1.0
 Design and Developed by: potenzaglobalsolutions.com
 
 */
@@ -17,11 +17,11 @@ Design and Developed by: potenzaglobalsolutions.com
 :: Text color
 :: Bg color
 :: Eq height
-:: Section title 
+:: Section title
 :: BG - Images
 :: BG - Overlay
 :: BG - Pattern
-:: Owl-carousel 
+:: Owl-carousel
 :: Title Effect
 :: Accordion
 :: Action Box
@@ -54,7 +54,7 @@ Design and Developed by: potenzaglobalsolutions.com
 ======================================
 [ End table content ]
 ======================================*/
- 
+
 /*************************
 		General
 *************************/
@@ -122,15 +122,15 @@ blockquote cite{font-size:16px; margin-top:15px; display: block; font-weight:600
 blockquote .quote-author, blockquote .quote-author a{font-size:16px; font-weight:500; color:#252525;}
 
 /***************************
-Page section margin padding 
+Page section margin padding
 ****************************/
 .page-section-ptb{padding:80px 0;} .page-section-pt{padding: 80px 0 0;} .page-section-pb{padding: 0 0 80px;}
 .page-section-ptb2{padding:20px 0;} .page-section-pt2{padding:20px 0 0;} .page-section-pb2{padding:0 0 20px;}
-.page-section-ptb3{padding:30px 0;} .page-section-pt3{padding:30px 0 0;} .page-section-pb3{padding:0 0 30px;} 
+.page-section-ptb3{padding:30px 0;} .page-section-pt3{padding:30px 0 0;} .page-section-pb3{padding:0 0 30px;}
 .page-section-ptb4{padding:40px 0;} .page-section-pt4{padding:40px 0 0;} .page-section-pb4{padding:0 0 40px;}
 .page-section-ptb5{padding:50px 0;} .page-section-pt5{padding:50px 0 0;} .page-section-pb5{padding:0 0 50px;}
 .page-section-ptb6{padding:60px 0;} .page-section-pt6{padding:60px 0 0;} .page-section-pb6{padding:0 0 60px;}
-.page-section-ptb7{padding:70px 0;} .page-section-pt7{padding:70px 0 0;} .page-section-pb7{padding:0 0 70px;} 
+.page-section-ptb7{padding:70px 0;} .page-section-pt7{padding:70px 0 0;} .page-section-pb7{padding:0 0 70px;}
 .page-section-ptb9{padding:90px 0;} .page-section-pt9{padding:90px 0 0;} .page-section-pb9{padding:0 0 90px;}
 .page-section-ptb100{padding:100px 0;} .page-section-pt9{padding:100px 0 0;} .page-section-pb9{padding:0 0 100px;}
 .page-section-ptb125{padding:125px 0;} .page-section-pt9{padding:125px 0 0;} .page-section-pb9{padding:0 0 125px;}
@@ -150,13 +150,13 @@ Page section margin padding
 .mb-9 { margin-bottom: 90px !important; }
 .mb-10 { margin-bottom: 100px !important; }
 
-.ptb-10{padding:10px 0 !important;} 
-.ptb-20{padding:20px 0 !important;} 
+.ptb-10{padding:10px 0 !important;}
+.ptb-20{padding:20px 0 !important;}
 .ptb-40{padding:40px 0 !important;}
-.ptb-50{padding:50px 0 !important;} 
-.ptb-60{padding:60px 0 !important;} 
+.ptb-50{padding:50px 0 !important;}
+.ptb-60{padding:60px 0 !important;}
 .ptb-80{padding:80px 0 !important;}
-.ptb-100{padding:100px 0 !important;} 
+.ptb-100{padding:100px 0 !important;}
 
 .pt-6 { padding-top: 60px !important; }
 .pt-7 { padding-top: 70px !important; }
@@ -204,11 +204,11 @@ Page section margin padding
 .row-eq-height { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex;}
 
 /*************************
-    Section title  
+    Section title
 ***********************/
 .section-title{margin-bottom:30px;}
 .section-title span{font-weight:600; font-size:16px;  margin-top:30px; display:block; line-height:28px;}
-.section-title p{padding:0 100px; margin-top:25px; display:block; margin-bottom:50px;} 
+.section-title p{padding:0 100px; margin-top:25px; display:block; margin-bottom:50px;}
 .text-left .section-title p, .section-title.text-left p, .section-title p.text-left{padding:0; margin-bottom:20px;}
 
 /*************************
@@ -218,7 +218,7 @@ Page section margin padding
 .bg { background-color: rgba(0, 0, 0, 0); background-origin: initial; background-position: center center; background-repeat: no-repeat; background-size: cover !important; position: relative; z-index: 0; }
 .parallax{background-size:cover; position:relative; z-index:0; background-repeat:inherit;}
 .gradient-overlay{position:relative;}
-.gradient-overlay:before{content:""; width:100%; height:100%; position:absolute; left:0; top:0; z-index:-1; background:url(src/assets/images/bg/gradient-overlay.png) repeat-y left 0;}
+.gradient-overlay:before{content:""; width:100%; height:100%; position:absolute; left:0; top:0; z-index:-1; background:url(src/assets/images/bg/bg-1.jpg) repeat-y left 0;}
 
 
 /*************************
@@ -231,7 +231,7 @@ Page section margin padding
 .pattern-3:before{background-image:url(src/assets/images/pattern/02.png);}
 .pattern-4:before{background-image:url(src/assets/images/pattern/03.png);}
 .pattern-5:before{background-image:url(src/assets/images/pattern/04.png);}
- 
+
 /*************************
    BG - Overlay
 *************************/
@@ -273,7 +273,7 @@ Page section margin padding
 
 .bg-effect{position:relative; z-index:0; margin-top:-20px; padding:0 17px;}
 .bg-effect > img{display:inline;}
-.bg-effect:before{content:""; background-color:#f9f9f9; background-image:url(src/assets/images/pattern/pattern3.png); width:100%; height:70%; left:0; position:absolute; top:15%; z-index:-1;}
+.bg-effect:before{content:""; background-color:#f9f9f9; background-image:url(src/assets/images/pattern/03.png); width:100%; height:70%; left:0; position:absolute; top:15%; z-index:-1;}
 
 .section-title .pos, .title .pos{margin-top:10px; color:#ffbc05;}
 .custom-info{position:relative; border-left:5px solid #ffbc05;}
@@ -281,8 +281,8 @@ Page section margin padding
 .custom-info p{position:relative; z-index:9; padding-left:50px; font-size:15px; font-style:italic; line-height:26px;}
 
 /*************************************
-        Owl-carousel      
-**************************************/ 
+        Owl-carousel
+**************************************/
 .owl-carousel .owl-item img { width: auto; }
 .owl-carousel .owl-nav { display: block; position: absolute; text-indent: inherit; top: 45%; transform: translateY(-50%); -webkit-transform: translateY(-50%); -o-transform: translateY(-50%); -ms-transform: translateY(-50%); -moz-transform: translateY(-50%); left: 0; width: 100%; cursor: pointer; z-index: 999;}
 .owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next{display: block; position: absolute; text-indent: inherit; width: auto; cursor: pointer; transition:all 0.2s ease-in-out; -webkit-transition:all 0.2s ease-in-out; -o-transition:all 0.2s ease-in-out; -moz-transition:all 0.2s ease-in-out; -ms-transition:all 0.2s ease-in-out;}
@@ -292,7 +292,7 @@ Page section margin padding
 .owl-carousel .owl-nav i:hover{background:#333 !important; color:#ffffff;}
 .dark-bg .owl-carousel .owl-nav i, .text-white .owl-carousel .owl-nav i{background:#ffbc05; color:#3d3d3d;}
 
-/* Dots */ 
+/* Dots */
 .owl-carousel .owl-controls .owl-dot { display: inline-block; margin-top: 10px; margin-right: 35px;}
 .owl-carousel .owl-dots { display: inline-block; position: absolute; bottom:0px; text-indent: inherit; width: 100%; cursor: pointer; text-align: center; }
 .owl-carousel.owl-theme .owl-dots .owl-dot span { transition:all 0.5s ease-in-out; -webkit-transition:all 0.5s ease-in-out; -o-transition:all 0.5s ease-in-out; -moz-transition:all 0.5s ease-in-out; -ms-transition:all 0.5s ease-in-out; cursor: pointer; }
@@ -881,7 +881,7 @@ form .form-group textarea { resize: vertical; }
 
 /* Bottom Position */
 .testimonial.bottom_pos {padding:0px 0 120px; text-align: left; margin-top:0; margin-bottom:50px;}
-.testimonial.bottom_pos .testimonial-avatar {bottom: -30px; top: inherit; left: 50%; transform: translateX(-50%) ; -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -webkit-transform: translateX(-50%); margin: 0;} 
+.testimonial.bottom_pos .testimonial-avatar {bottom: -30px; top: inherit; left: 50%; transform: translateX(-50%) ; -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -webkit-transform: translateX(-50%); margin: 0;}
 .testimonial.bottom_pos .testimonial-info{text-align: center;}
 .testimonial.bottom_pos .author-info{text-align: center; color: #ffffff}
 .testimonial.bottom_pos .author-info span{color: #ffffff}
@@ -984,8 +984,8 @@ form .form-group textarea { resize: vertical; }
 .banner-form .dropdown-toggle::after{margin-left: -20px;}
 .banner-form .dropdown-menu{padding: 0;}
 .banner-form .bootstrap-select > .dropdown-toggle{color: #333333; outline: none !important;}
-.banner-form .bootstrap-select.btn-group .dropdown-menu li a { padding: 7px 8px; display: block; font-weight: normal; color: #000;line-height: 24px;} 
-.banner-form .bootstrap-select.btn-group .dropdown-menu li.selected a {background: #ffbc05;} 
+.banner-form .bootstrap-select.btn-group .dropdown-menu li a { padding: 7px 8px; display: block; font-weight: normal; color: #000;line-height: 24px;}
+.banner-form .bootstrap-select.btn-group .dropdown-menu li.selected a {background: #ffbc05;}
 .banner-form .bootstrap-select.btn-group .dropdown-toggle .filter-option{overflow: inherit;}
 .form-1 {background: #a395a1; margin-bottom: -82px; position: relative; top: -78px; width: 100%; z-index: 9;}
 .form-1 .banner-form {margin-top: 0;}
@@ -1014,14 +1014,14 @@ form .form-group textarea { resize: vertical; }
 .our-app-2 .timeline-inner{background-position: left -300px bottom -100px !important; height: auto; padding-bottom: 80px;}
 
  /*************************************
-  Banner Slider 
-*************************************/ 
+  Banner Slider
+*************************************/
 #main-slider { overflow: hidden; -webkit-backface-visibility: hidden; -webkit-transform-style: preserve-3d; }
 #main-slider .item img { width: 100%; }
 #main-slider .item .slider-content { z-index: 0; opacity: 0; -webkit-transition: opacity 500ms; -moz-transition: opacity 500ms; -o-transition: opacity 500ms; -ms-transition: opacity 500ms; transition: opacity 500ms; }
 #main-slider .item.active .slider-content { z-index: 0; opacity: 1; -webkit-transition: opacity 100ms; -ms-transition: opacity 100ms; -moz-transition: opacity 100ms; -o-transition: opacity 100ms; transition: opacity 100ms; }
 #main-slider .slider-content{ display: inline-block; left: 0; position: absolute; text-align: center; top: 55%; transform: translateY(-50%); -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); width: 100%; z-index: 2; }
-#main-slider .slider-content .slider-3, #main-slider .slider-content .slider-3 h1 { width: 70%; } 
+#main-slider .slider-content .slider-3, #main-slider .slider-content .slider-3 h1 { width: 70%; }
 #main-slider .slider-content h1{width: 50%; display: inline-block;}
 #main-slider .slider-content a.button-orange:hover { background: #fff; color: #fff; }
 #main-slider .slider-content span { color: #ffbc05;}
@@ -1047,13 +1047,13 @@ form .form-group textarea { resize: vertical; }
 .carousel .item.active .animated5 { -webkit-animation: bounceInLeft 1s ease-in-out 100ms both; -o-animation: bounceInLeft 1s ease-in-out 100ms both; -ms-animation: bounceInLeft 1s ease-in-out 100ms both; -moz-animation: bounceInLeft 1s ease-in-out 100ms both; animation: bounceInLeft 1s ease-in-out 100ms both; }
 .carousel .item.active .animated6 { -webkit-animation: bounceIn 1s ease-in 500ms both; -o-animation: bounceIn 1s ease-in 500ms both; -ms-animation: bounceIn 1s ease-in 500ms both; -moz-animation: bounceIn 1s ease-in 500ms both; animation: bounceIn 1s ease-in 500ms both;  }
 .carousel .item.active .animated7 { -webkit-animation: fadeInDown 0.7s ease-in 1000ms both; -o-animation: fadeInDown 0.7s ease-in 1000ms both;  -moz-animation: fadeInDown 0.7s ease-in 1000ms both;  -ms-animation: fadeInDown 0.7s ease-in 1000ms both; animation: fadeInDown 0.7s ease-in 1000ms both; }
-.carousel .item.active .animated8 { -webkit-animation: fadeInUp 0.7s ease-in 1000ms both; -o-animation: fadeInUp 0.7s ease-in 1000ms both;  -moz-animation: fadeInUp 0.7s ease-in 1000ms both;  -ms-animation: fadeInUp 0.7s ease-in 1000ms both; animation: fadeInUp 0.7s ease-in 1000ms both; } 
+.carousel .item.active .animated8 { -webkit-animation: fadeInUp 0.7s ease-in 1000ms both; -o-animation: fadeInUp 0.7s ease-in 1000ms both;  -moz-animation: fadeInUp 0.7s ease-in 1000ms both;  -ms-animation: fadeInUp 0.7s ease-in 1000ms both; animation: fadeInUp 0.7s ease-in 1000ms both; }
 .carousel, .carousel-inner, .carousel-inner > .item, #main-slider .item img, .banner{height: 100%;}
 .banner{background-repeat: no-repeat; background-size: cover;}
 
  /*************************************
-          Login and Ragister Page 
-*************************************/ 
+          Login and Ragister Page
+*************************************/
 
 .login-1-social li { float: left; padding: 0; width: 50%; margin: 0; list-style: none;}
 .login-1-social li i { font-size: 20px; margin-right: 15px; }
@@ -1081,15 +1081,15 @@ form .form-group textarea { resize: vertical; }
 
 /*************************************
   Error 404
-*************************************/ 
+*************************************/
 .error-page{padding-top: 200px;}
-.error-page .button{height: 50px; margin-top: 0; line-height: 27px;} 
+.error-page .button{height: 50px; margin-top: 0; line-height: 27px;}
 .error-page:before, .login-form-2 .login-2-form:before { content: ""; right: 50px; bottom: 0; position: absolute; }
 .error-page:before{background: url(src/assets/images/error-404.png) no-repeat 0 0; width: 587px; height: 889px; background-size: contain;}
 
 /*************************************
-          Step 
-*************************************/ 
+          Step
+*************************************/
 .stepwizard { display: table; width: 100%; position: relative; }
 .stepwizard-row { display: table-row; }
 .stepwizard-step { display: table-cell; text-align: center; position: relative; width: 33.33%; z-index: 9; }
@@ -1151,14 +1151,14 @@ form .form-group .checkbox label, form .form-group .radio label { padding-left: 
 @media screen and (max-width:767px){.text-xs-left{text-align:left;} .text-xs-center{text-align:center;} .text-xs-right{text-align:right;}}
 @media screen and (max-width:479px){.text-xx-left{text-align:left;} .text-xx-center{text-align:center;} .text-xx-right{text-align:right;} .col-xx-12{width:100%; float:none;}}
 
-@media screen and (-webkit-min-device-pixel-ratio:0) { 
+@media screen and (-webkit-min-device-pixel-ratio:0) {
     /* Safari and Chrome, if Chrome rule needed */
     .timeline > li:before{bottom: -165px;}
     .timeline > li:last-child:after{bottom: -50px; margin-left: -5px;}
     .banner-form form .form-group select.form-control{padding: 0 10px;}
 
     /* Safari 5+ ONLY */
-    ::i-block-chrome, .timeline > li:last-child:after{bottom: -30px;} 
+    ::i-block-chrome, .timeline > li:last-child:after{bottom: -30px;}
 }
 
 @media screen and (max-width:1770px) {
@@ -1251,7 +1251,7 @@ form .form-group .checkbox label, form .form-group .radio label { padding-left: 
 h2{font-size: 40px; line-height: 50px;}
 h4{font-size: 18px;}
 h5{font-size: 14px;}
-.page-section-ptb{padding:50px 0;} 
+.page-section-ptb{padding:50px 0;}
 .page-section-pt{padding: 50px 0 0;}
 .page-section-pb{padding: 0 0 50px;}
 .gradient-overlay::before{background-position:40% 0;}
@@ -1336,7 +1336,7 @@ h5{font-size: 14px;}
   Blog Post
 ---------------------------------------------------*/
 .container { max-width: 750px;}
-.post.left_pos .post-image, 
+.post.left_pos .post-image,
 .post.left_pos .post-details{width:100%;}
 .post.left_pos .post-image{height:280px; overflow:hidden;}
 
@@ -1345,7 +1345,7 @@ h5{font-size: 14px;}
 ---------------------------------------------------*/
 .team.left_pos{padding-left:0;}
 .team.left_pos .team-images{height:330px; left:0; overflow:hidden; padding-top:15px;  position:relative; text-align:center; top:0; width:auto;}
-.team.left_pos .team-social-icon{position:relative; width:100%;}	
+.team.left_pos .team-social-icon{position:relative; width:100%;}
 .counter label { font-size: 10px; }
 .story-details h5{ font-size: 14px; }
 .accordion.boxed{ margin-bottom: 50px; }
@@ -1374,10 +1374,10 @@ h6.title2 {font-size: 22px; line-height: 30px;}
 .intro-title h1 {  font-size: 29px !important;}
 .section-title .sub-title {  font-size: 65px !important;}
 
-/* Page section margin padding */ 
+/* Page section margin padding */
 
-.page-section-ptb{padding:40px 0;} 
-.page-section-pt{padding: 40px 0 0;} 
+.page-section-ptb{padding:40px 0;}
+.page-section-pt{padding: 40px 0 0;}
 .page-section-pb{padding: 0 0 40px;}
 
 .sm-pb-6 { padding-bottom: 60px !important; }

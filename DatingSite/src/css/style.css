@@ -2,7 +2,7 @@
 
 Template: Cupid Love Dating HTML5 Template
 Author: potenzaglobalsolutions.com
-Version: 1.0  
+Version: 1.0
 Design and Developed by: potenzaglobalsolutions.com
 
 */
@@ -12,11 +12,11 @@ Design and Developed by: potenzaglobalsolutions.com
 [  Table of contents  ]
 ==================================================
 
-:: loading 
-:: Header 
+:: loading
+:: Header
 :: - Header White
 :: - Header Dark
-:: - Header Fancy 
+:: - Header Fancy
 :: Heading Style
 :: Inner intro
 :: Footer
@@ -31,7 +31,7 @@ Design and Developed by: potenzaglobalsolutions.com
 :: - SideBar - Tags
 :: - SideBar - Archives
 :: Blog - Masonry
-:: Blog - Single Page 
+:: Blog - Single Page
 :: - Pagination
 :: Terms and Conditions
 :: Privacy Policy
@@ -43,13 +43,13 @@ Design and Developed by: potenzaglobalsolutions.com
 ======================================
 [ End table content ]
 ======================================*/
- 
+
  /*************************
         loading
 *************************/
 #preloader{background:#343434 !important; bottom:0; height:100%; left:0; overflow:hidden !important;  position:fixed; right:0; top:0; width:100%; z-index:99999; text-align:center;}
 .clear-loading { text-align: center;  position: absolute; top: 50%; left: 50%; margin-left: -152px; -webkit-box-sizing: border-box;-moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; display:inline-block;  text-align:center; transform: translateY(-50%); -webkit-transform: translateY(-50%); -o-transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%);}
- 
+
  /*Loading Effect */
 .loading-effect{width:350px; height:350px;}
 .loading-effect span{float:left; margin-top:28px;}
@@ -59,7 +59,7 @@ Design and Developed by: potenzaglobalsolutions.com
 .mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close{cursor: url(src/assets/images/close.png) 25 25, pointer;}
 
 /*---------------------------------------------------------------------
-  Header 
+  Header
 ---------------------------------------------------------------------*/
 #header{ width:100%; z-index:99;}
 #header.defualt{background: transparent; z-index: 999; padding: 0px; margin: 0px; position: relative; width: 100%; }
@@ -84,7 +84,7 @@ Design and Developed by: potenzaglobalsolutions.com
 #header.fancy + .fullscreen {margin-bottom: 0; top: 0;}
 
 /*mega-menu*/
-.mega-menu .menu-logo { padding:19px 0 17px; } 
+.mega-menu .menu-logo { padding:19px 0 17px; }
 .mega-menu.desktopTopFixed .menu-list-items .menu-logo > li > a img {height: 45px;}
 .mega-menu .menu-links > li > a { line-height:98px; text-transform: uppercase; font-size: 14px; font-weight:500;}
 .mega-menu .menu-links > li > a:before, .mega-menu .menu-links > li.active > a:before{-webkit-transition: all 0.7s ease-out 0s; -moz-transition: all 0.7s ease-out 0s; -ms-transition: all 0.7s ease-out 0s; -o-transition: all 0.7s ease-out 0s;
@@ -120,7 +120,7 @@ Design and Developed by: potenzaglobalsolutions.com
 .mega-menu.desktopTopFixed .menu-list-items{background:rgba(21,21,21,0.9); padding: 0px; }
 .mega-menu.desktopTopFixed .menu-logo { padding: 16px 0px; }
 .mega-menu.desktopTopFixed .menu-list-items .menu-links > li > a{line-height: 75px;}
- 
+
 /*------------------------------------
  Header White
 -------------------------------------*/
@@ -210,7 +210,7 @@ Design and Developed by: potenzaglobalsolutions.com
 ul.page-breadcrumb li span { font-size:14px; text-transform: capitalize; }
 ul.page-breadcrumb {background: rgba(255, 255, 255, 0.3); border-radius: 5px; display: inline-block; padding: 0 20px;}
 ul.page-breadcrumb li {color: #fff; display: inline-block; list-style: none; padding-left:0;}
-ul.page-breadcrumb li i{font-size: 14px; padding: 0 7px;} 
+ul.page-breadcrumb li i{font-size: 14px; padding: 0 7px;}
 ul.page-breadcrumb li a{color: #ffffff; font-size: 14px; text-transform: capitalize; }
 .intro-title h1{display: inline-block; width: 100%; font-size: 40px; line-height: 50px;}
 .intro-title h1.divider:before{bottom: -50px;}
@@ -219,7 +219,7 @@ ul.page-breadcrumb li a{color: #ffffff; font-size: 14px; text-transform: capital
 /*---------------------------------------------------------------------
   Footer
 ---------------------------------------------------------------------*/
-.footer{background:url(../images/pattern/pattern2.jpg) no-repeat 0 0; color:#c5c5c5;}
+.footer{background:url(src/assets/images/pattern/02.png) no-repeat 0 0; color:#c5c5c5;}
 .footer .title{position: relative; color:#fff; margin-bottom:40px;}
 .footer-address li {line-height:28px; padding:0; margin-top:0; margin-bottom:10px; display:block;}
 .footer-address li i{float: left; color:#ffbc05; padding-right: 20px; font-size: 16px; line-height: 30px; width: 30px; }
@@ -353,7 +353,7 @@ hr{border-style:dashed; border-color:#d5d5d5; margin:50px 0;}
 .comments-1{background:#ffbc05; padding:20px; color:#ffffff; line-height:22px;}
 .comments-1 .comments-photo{padding-right:20px;}
 .comments-1 .comments-photo img{border:4px solid #ffffff;}
-.comments-1 .comments-info .title{margin-top:0; margin-bottom:5px; color:#ffffff;} 
+.comments-1 .comments-info .title{margin-top:0; margin-bottom:5px; color:#ffffff;}
 
 /* Comments Box */
 .comment-box {margin-top:35px;}
@@ -382,17 +382,17 @@ hr{border-style:dashed; border-color:#d5d5d5; margin:50px 0;}
 ----------------------------*/
 .pagination-nav{margin-top:30px; text-align: right;}
 .pagination > li{list-style-type:none; float:left;  display:block;}
-.pagination > li > a, 
+.pagination > li > a,
 .pagination > li > span{ border-color:#cccccc; color:#757575; margin:0; border-radius: 50%; background: #3c3c3c; color: #ffffff; padding: 5px 10px;}
-.pagination > li.previous > a, 
+.pagination > li.previous > a,
 .pagination > li.next > a{ border:none; background: none; color: #3d3d3d;}
-.pagination > li.active > a:hover, 
-.pagination > li.active > a, 
-.pagination > li > a:focus, 
-.pagination > li > a:hover, 
-.pagination > li > span:focus, 
+.pagination > li.active > a:hover,
+.pagination > li.active > a,
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
 .pagination > li > span:hover{background:#ffbc05; color:#ffffff; border-color:#ffbc05;}
-.pagination > li.previous > a:focus, .pagination > li.previous > a:hover, 
+.pagination > li.previous > a:focus, .pagination > li.previous > a:hover,
 .pagination > li.next > a:focus, .pagination > li.next > a:hover{background: none;}
 .pagination > li.previous > a:hover,
 .pagination > li.next > a:hover{color: #ffbc05;}
@@ -400,22 +400,22 @@ hr{border-style:dashed; border-color:#d5d5d5; margin:50px 0;}
 /*--------------------------------------------------------------------
   Terms and Conditions
 --------------------------------------------------------------------*/
-.terms-and-conditions .title{margin-bottom:10px;} 
+.terms-and-conditions .title{margin-bottom:10px;}
 .terms-and-conditions p{margin-bottom:25px;}
 .terms-and-conditions ul.list{margin-bottom:20px; display:block;}
 .terms-and-conditions ul.list li i{padding-right:12px; font-size:15px;}
 
 /*--------------------------------------------------------------------
   Privacy Policy
---------------------------------------------------------------------*/ 
-.privacy-policy .title{margin-bottom:10px;} 
+--------------------------------------------------------------------*/
+.privacy-policy .title{margin-bottom:10px;}
 .privacy-policy p{margin-bottom:25px;}
 .privacy-policy ul.list{margin-bottom:20px; display:block;}
 .privacy-policy ul.list li i{padding-right:12px; font-size:15px;}
 
 /*--------------------------------------------------------------------
   404 Error & Coming Soon
---------------------------------------------------------------------*/ 
+--------------------------------------------------------------------*/
 .error-404, .coming-soon{background-position:center 80%; background-repeat:no-repeat; position:relative; padding-top:60px; padding-bottom:60px;}
 .error-404.bg-overlay-white-90:before, .coming-soon.bg-overlay-white-90:before{background:rgba(255, 255, 255, 0.92);}
 
@@ -429,7 +429,7 @@ hr{border-style:dashed; border-color:#d5d5d5; margin:50px 0;}
 
 /*--------------------------------------------------------------------
  Back to Top
---------------------------------------------------------------------*/ 
+--------------------------------------------------------------------*/
 #back-to-top .top{z-index: 999; position:fixed; margin:0px; background:#ffbc05;background:-webkit-linear-gradient(90deg,#ffbc05,#ff3b30);background:-o-linear-gradient(90deg,#ffbc05,#ff3b30);background:-moz-linear-gradient(90deg,#ffbc05,#ff3b30);background:linear-gradient(90deg,#ffbc05,#ff3b30); border-radius: 50%; -webkit-transition:all .3s ease-in-out; -moz-transition:all .3s ease-in-out; transition:all .3s ease-in-out; position:fixed; bottom:115px; right:25px; z-index: 999; font-size:24px; color: #ffffff; width:50px; height:50px; text-align:center; line-height:50px;}
 #back-to-top .top:hover{color: #3d3d3d !important}
 
@@ -449,7 +449,7 @@ hr{border-style:dashed; border-color:#d5d5d5; margin:50px 0;}
 .section-title .sub-title {font-size: 70px;}
 
 /*-------------------------------------------------
-  Header 
+  Header
 --------------------------------------------------*/
 #header.defualt { position: relative; background: #323232; }
 #header .topbar{display:none;}
@@ -462,7 +462,7 @@ hr{border-style:dashed; border-color:#d5d5d5; margin:50px 0;}
 .mega-menu .menu-links > li > a:hover:before{opacity: 0;}
 
 /* Defualt Header */
-.mega-menu .row > [class*='col-']:before, 
+.mega-menu .row > [class*='col-']:before,
 .mega-menu .row > [class*='col-']:after{content:""; display:table; clear:both;}
 
 .mega-menu .menu-links{left:0; position:absolute; top:100%; width:100%;}
@@ -475,19 +475,19 @@ hr{border-style:dashed; border-color:#d5d5d5; margin:50px 0;}
 #header.fancy .row > [class*='col-'] { padding-left: 0px; padding-right: 0px;  }
 
 /*-------------------------------------------------
-Blog Page 
+Blog Page
 --------------------------------------------------*/
 .comments-1{width:100%;}
 .comment-list ul{padding-left:20px;}
 
 /*-------------------------------------------------
-Contact Page 
+Contact Page
 --------------------------------------------------*/
 form .half-group{margin-right:0; width:100%;}
 .form-2 form .half-group{float:left; margin-left:2%;  width:48%;}
 
 /*-------------------------------------------------
-Comming soon Page 
+Comming soon Page
 --------------------------------------------------*/
 .countdown > li {padding-bottom: 10px;}
 .countdown > li span {font-size: 50px; line-height: 50px;}
@@ -507,7 +507,7 @@ Comming soon Page
 .inner-intro .container {width: 100%;}
 
 /*-------------------------------------------------
-  loading 
+  loading
 --------------------------------------------------*/
 .clear-loading{margin-left:-50px;}
 .loading-effect{width:100px; height:100px;}
@@ -515,13 +515,13 @@ Comming soon Page
 .loading-effect img {width: 100px;}
 
 /*-------------------------------------------------
-  Header 
+  Header
 --------------------------------------------------*/
 .mega-menu{min-height:70px;}
 .mega-menu .menu-logo img{height:30px;}
 
 /*-------------------------------------------------
- footer  
+ footer
 --------------------------------------------------*/
 .footer-widget p{text-align:center;}
 .footer-widget ul{text-align:center;}
@@ -529,7 +529,7 @@ Comming soon Page
 .footer-widget{padding:15px 0;/* margin-top:10px !important;*/}
 
 /*-------------------------------------------------
-Contact  Page 
+Contact  Page
 --------------------------------------------------*/
 .form-2 form .half-group{float:none; width:100%; margin-left:0;}
 form.input3-col .half-group{width:100%;}
@@ -548,7 +548,7 @@ Owl-dots
 .owl-carousel .owl-dots{position:relative; bottom:0;}
 
 /*-------------------------------------------------
-Comming soon Page 
+Comming soon Page
 --------------------------------------------------*/
 .countdown {margin-top: 20px; float: none;}
 .countdown > li {margin:0 10px;}
@@ -568,13 +568,13 @@ ul.page-breadcrumb li i {font-size: 13px; padding: 0 5px;}
 
 /*-------------------------------------------------
 All Counter
---------------------------------------------------*/	
+--------------------------------------------------*/
 .counter-section{padding-top:20px; padding-bottom:25px;}
 .counter-section .counter{margin:10px 0 !important;}
 .counter-section .counter-block > div{margin-bottom:0 !important;}
 
 /*-------------------------------------------------
-Single-Blog Page 
+Single-Blog Page
 --------------------------------------------------*/
 .blog-post .post .post-image + .post-date,
 .single-blog .post .post-image + .post-date{margin-top:-93px;}
@@ -583,7 +583,7 @@ Single-Blog Page
 .comment-list .reply{position:relative;}
 
 /*-------------------------------------------------
-Comming soon Page 
+Comming soon Page
 --------------------------------------------------*/
 .coming-soon .title{font-size:30px; line-height:40px;}
 .countdown > li{margin: 0 5px; padding-bottom: 0;}
@@ -591,7 +591,7 @@ Comming soon Page
 .countdown > li p{font-size:12px;}
 
 /*-------------------------------------------------
-Action-box Page 
+Action-box Page
 --------------------------------------------------*/
 .action-box.action-icon i{line-height:40px; top:0;}
 .action-box.action-icon i::before{font-size:40px;}
