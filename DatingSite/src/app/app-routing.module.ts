@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponentComponent },
   //for test!!!!
   { path: 'test', component: TesterComponentComponent },
-  { path: 'myProfile', component: MyProfileComponentComponent },
+  { path: 'myProfile', component: MyProfileComponentComponent }
 ];
 
 @NgModule({
