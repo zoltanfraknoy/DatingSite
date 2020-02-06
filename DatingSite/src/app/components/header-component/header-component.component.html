@@ -21,7 +21,7 @@
 
                 <a href="#" ngbDropdownAnchor (focus)="myDrop.open()" (click)="$event.preventDefault()">Profiles
 
-                  <div ngbDropdownMenu>
+                  <div ngbDropdownMenu aria-labelledby="navbarDropdown1">
 
                     <button ngbDropdownItem routerLink="/myprofile" routerLinkActive="active">My Profile</button>
                     <button ngbDropdownItem routerLink="/profiles" routerLinkActive="active">Profiles</button>
@@ -30,22 +30,19 @@
                 </a>
 
               </li>
-              <li class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
-                <a href="#" ngbDropdownAnchor (focus)="myDrop.open()" (click)="$event.preventDefault()">Sign in /
+              <li><a href="#"> Contact </a>
+              </li>
+
+              <li class="d-inline-block" ngbDropdown #myDrop2="ngbDropdown">
+                <a href="#" ngbDropdownAnchor (focus)="myDrop2.open()" (click)="$event.preventDefault()">Sign in /
                   Registration
-                  <div ngbDropdownMenu>
+                  <div ngbDropdownMenu aria-labelledby="navbarDropdown2">
                     <button ngbDropdownItem routerLink="/login" routerLinkActive="active">Login</button>
                     <button ngbDropdownItem routerLink="/registration" routerLinkActive="active">Sign up</button>
                   </div>
 
                 </a>
 
-              </li>
-              <li><a href="#"> Contact </a>
-                <!-- drop down multilevel  -->
-                <ul class="drop-down-multilevel right-menu">
-                  <li><a href="#">Contact 2</a></li>
-                </ul>
               </li>
             </ul>
           </section>
