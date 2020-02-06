@@ -13,6 +13,9 @@ import { LoginComponentComponent } from './components/login-component/login-comp
 import { RegistrationComponent } from './components/registration/registration.component';
 import {ErrorPageComponent} from './components/error-page/error-page.component';
 import {InfoLineComponent} from './components/info-line/info-line.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -32,7 +35,10 @@ import {InfoLineComponent} from './components/info-line/info-line.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
