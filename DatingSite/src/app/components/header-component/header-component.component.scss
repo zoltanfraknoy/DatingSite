@@ -3,6 +3,11 @@
     position: relative;
     z-index: 1;
 }
+.dropdown-item.active, .dropdown-item:active {
+    color: #16181b;
+    text-decoration: none;
+    background-color:white;
+}
 
 .dropdown-item:hover, .dropdown-item:focus {
     color: #16181b;
