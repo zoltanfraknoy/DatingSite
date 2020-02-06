@@ -5,6 +5,7 @@ import { from } from 'rxjs';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { LoginComponentComponent } from './components/login-component/login-component.component';
 import {TesterComponentComponent} from './components/tester-component/tester-component.component';
+import { MyProfileComponentComponent } from './components/my-profile-component/my-profile-component.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'main' },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponentComponent },
   //for test!!!!
   { path: 'test', component: TesterComponentComponent },
+  { path: 'myProfile', component: MyProfileComponentComponent },
 ];
 
 @NgModule({
