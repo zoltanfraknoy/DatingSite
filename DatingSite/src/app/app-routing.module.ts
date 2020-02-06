@@ -7,6 +7,8 @@ import { LoginComponentComponent } from './components/login-component/login-comp
 import { TesterComponentComponent } from './components/tester-component/tester-component.component';
 import { MyProfileComponentComponent } from './components/my-profile-component/my-profile-component.component';
 import { RegistrationComponent } from './components/registration/registration.component';
+import { ProfilesComponent } from './components/profiles/profiles.component';
+
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'main' },
@@ -15,7 +17,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponentComponent },
   //for test!!!!
   { path: 'test', component: TesterComponentComponent },
-  { path: 'myProfile', component: MyProfileComponentComponent }
+  { path: 'myProfile', component: MyProfileComponentComponent },
+  { path: 'profiles', component: ProfilesComponent }
 ];
 
 @NgModule({

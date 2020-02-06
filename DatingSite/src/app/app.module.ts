@@ -15,6 +15,7 @@ import {ErrorPageComponent} from './components/error-page/error-page.component';
 import {InfoLineComponent} from './components/info-line/info-line.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ProfilesComponent } from './components/profiles/profiles.component';
 
 
 
@@ -30,7 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
     RegistrationComponent,
     ErrorPageComponent,
     MyProfileComponentComponent,
-    InfoLineComponent
+    InfoLineComponent,
+    ProfilesComponent
   ],
   imports: [
     BrowserModule,
