@@ -11,6 +11,8 @@ import { ContactComponentComponent } from './components/contact-component/contac
 import { MyProfileComponentComponent } from './components/my-profile-component/my-profile-component.component';
 import { LoginComponentComponent } from './components/login-component/login-component.component';
 import { RegistrationComponent } from './components/registration/registration.component';
+import {ErrorPageComponent} from './components/error-page/error-page.component';
+import {InfoLineComponent} from './components/info-line/info-line.component';
 
 
 @NgModule({
@@ -22,7 +24,10 @@ import { RegistrationComponent } from './components/registration/registration.co
     FooterComponentComponent,
     ContactComponentComponent,
     LoginComponentComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    ErrorPageComponent,
+    MyProfileComponentComponent,
+    InfoLineComponent
   ],
   imports: [
     BrowserModule,
