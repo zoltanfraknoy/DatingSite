@@ -1,60 +1,53 @@
-<div class="menu" style="background-color: beige;">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12"> 
-            <!-- menu start -->
-            <p></p>
-            <nav id="menu" class="mega-menu"> 
-              <!-- menu list items container -->
-              <section class="menu-list-items"> 
-                <!-- menu logo -->
-                <ul class="menu-logo">
-                  <li><a href="index-default.html"><img id="logo_color_img" src="/assets/images/dark-logo.png" alt="logo" /> </a></li>
-                </ul>
-                <!-- menu links -->
-                <ul class="menu-links">
-                  <!-- active class -->
-                  <li class="active"><a href=""> Home</a> 
-                  </li>
-                  <li><a href="">Profiles <i class="fa fa-angle-down fa-indicator btn btn-outline-warning"></i></a> 
-                    <!-- drop down multilevel  -->
-                    <ul class="drop-down-multilevel left-menu">
-                      <li><a href="profile.html">Profiles 01</a></li>  
-                                         
-                    </ul>
-                  </li>                 
-                  <li><a href="javascript:void(0)"> Pages <i class="fa fa-angle-down fa-indicator btn btn-outline-warning"></i></a> 
-                    <!-- drop down full width -->
-                    <div class="drop-down grid-col-12"> 
-                      <!--grid row-->
-                      <div class="grid-row"> 
-                        <!--grid column 3-->                        
-                        <div class="grid-col-3">
-                          <ul>
-                            <li><a href="login.html">Login 01</a></li>                            
-                            <li><a href="register.html">Register 01</a></li>                            
-                            <li><a href="step.html">Step</a></li>
-                          </ul>
-                        </div>
-                        <!--grid column 3-->
-                        <div class="grid-col-3">
-                          <ul>
-                            <li><a href="error-404.html"> 404 Error </a></li>                           
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </li>               
-                  <li><a href="javascript:void(0)"> Contact </a> 
-                    <!-- drop down multilevel  -->
-                    <ul class="drop-down-multilevel right-menu">         
-                      <li><a href="contact-2.html">Contact 2</a></li>                      
-                    </ul>
-                  </li>
-                </ul>
-              </section>
-            </nav>
-          </div>
-        </div>
+<div class="menu" style="background-color: black;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- menu start -->
+        <p></p>
+        <nav id="menu" class="mega-menu">
+          <!-- menu list items container -->
+          <section class="menu-list-items">
+            <!-- menu logo -->
+            <ul class="menu-logo">
+              <li><a routerLink="/main"><img id="logo_color_img" src="/assets/images/dark-logo.png" alt="logo" /> </a>
+              </li>
+            </ul>
+            <!-- menu links -->
+            <ul class="menu-links ">
+              <!-- active class -->
+              <li class="active"><a routerLink="/main"> Home</a>
+              </li>
+              <li class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
+
+                <a href="#" ngbDropdownAnchor (focus)="myDrop.open()" (click)="$event.preventDefault()">Profiles
+
+                  <div ngbDropdownMenu aria-labelledby="navbarDropdown1">
+
+                    <button ngbDropdownItem routerLink="/myProfile" routerLinkActive="active">My Profile</button>
+                    <button ngbDropdownItem routerLink="/profiles" routerLinkActive="active">Profiles</button>
+
+                  </div>
+                </a>
+
+              </li>
+              <li><a href="#"> Contact </a>
+              </li>
+
+              <li class="d-inline-block" ngbDropdown #myDrop2="ngbDropdown">
+                <a href="#" ngbDropdownAnchor (focus)="myDrop2.open()" (click)="$event.preventDefault()">Sign in /
+                  Registration
+                  <div ngbDropdownMenu aria-labelledby="navbarDropdown2">
+                    <button ngbDropdownItem routerLink="/login" routerLinkActive="active">Login</button>
+                    <button ngbDropdownItem routerLink="/registration" routerLinkActive="active">Sign up</button>
+                  </div>
+
+                </a>
+
+              </li>
+            </ul>
+          </section>
+        </nav>
       </div>
     </div>
+  </div>
+</div>
