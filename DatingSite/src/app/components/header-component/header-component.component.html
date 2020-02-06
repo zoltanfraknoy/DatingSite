@@ -18,7 +18,7 @@
               </li>
               <li class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
 
-                <a href="#" id="dropdownManual" ngbDropdownAnchor (focus)="myDrop.open()">Profiles
+                <a href="#" id="dropdownManual" ngbDropdownAnchor (focus)="myDrop.open()" (click)="$event.preventDefault()">Profiles
                   <!-- <i class="fa fa-angle-down fa-indicator"></i> -->
                   <div ngbDropdownMenu aria-labelledby="dropdownManual">
 
