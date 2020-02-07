@@ -19,9 +19,9 @@ export class RegistrationComponent implements OnInit {
 
   constructor(private userService: UserService, private router: Router) {
     this.user = {
-      nickName: '',
-      eMail: '',
-      passWd: '',
+      name: '',
+      email: '',
+      password: '',
     };
   }
 
@@ -35,11 +35,11 @@ export class RegistrationComponent implements OnInit {
 
   ngOnInit() {
     this.myForm = new FormGroup({
-      nickName: new FormControl(this.user.nickName, Validators.required),
-      eMail: new FormControl(this.user.eMail,
+      name: new FormControl(this.user.name, Validators.required),
+      email: new FormControl(this.user.email,
         [ Validators.required, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')]
       ),
-      passWd: new FormControl(this.user.passWd, Validators.required),
+      password: new FormControl(this.user.password, Validators.required),
       passWd2: new FormControl(this.passWdForValid, Validators.required),
     });
   }

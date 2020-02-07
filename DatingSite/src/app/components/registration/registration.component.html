@@ -8,26 +8,26 @@
               <h4 class="title divider-3 text-white mb-3">sign up</h4>
               <div class="section-field mb-3">
                 <div class="field-widget"> <i class="glyph-icon flaticon-user"></i>
-                  <input formControlName="nickName" type="text" placeholder="Nickname">
+                  <input formControlName="name" type="text" placeholder="Nickname">
                 </div>
                 <div class="error">
-                  <p *ngIf="myForm.controls.nickName.invalid && myForm.controls.nickName.touched"> * This field is required!</p>
+                  <p *ngIf="myForm.controls.name.invalid && myForm.controls.name.touched"> * This field is required!</p>
                 </div>
               </div>
               <div class="section-field mb-3">
                 <div class="field-widget"> <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                  <input formControlName="eMail" type="text" placeholder="Email">
+                  <input formControlName="email" type="text" placeholder="Email">
                 </div>
                 <div class="error">
-                  <p *ngIf="myForm.controls.eMail.invalid && myForm.controls.eMail.touched">* Bad e-mail format!</p>
+                  <p *ngIf="myForm.controls.email.invalid && myForm.controls.email.touched">* Bad e-mail format!</p>
                 </div>
               </div>
               <div class="section-field mb-3">
                 <div class="field-widget"> <i class="glyph-icon flaticon-padlock"></i>
-                  <input formControlName="passWd" id="Password" class="Password" type="password" placeholder="Password">
+                  <input formControlName="password" id="Password" class="Password" type="password" placeholder="Password">
                 </div>
                 <div class="error">
-                  <p *ngIf="myForm.controls.passWd.invalid && myForm.controls.passWd.touched">* This field is required!</p>
+                  <p *ngIf="myForm.controls.password.invalid && myForm.controls.password.touched">* This field is required!</p>
                 </div>
               </div>
               <div class="section-field mb-3">
@@ -35,7 +35,7 @@
                   <input formControlName="passWd2" id="ConfirmPassword" class="Password" type="password" placeholder="Confirm Password">
                 </div>
                 <div class="error">
-                  <p *ngIf="myForm.controls.passWd.touched && myForm.controls.passWd2.touched && (myForm.controls.passWd.value != myForm.controls.passWd2.value)">* Passwords not same!</p>
+                  <p *ngIf="myForm.controls.password.touched && myForm.controls.passWd2.touched && (myForm.controls.password.value != myForm.controls.passWd2.value)">* Passwords not same!</p>
                 </div>
               </div>
               <div class="clearfix"></div>
