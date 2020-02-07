@@ -11,23 +11,37 @@
               <li><a class="gplus" href="#"><i class="fa fa-google-plus"></i> google+</a></li>
             </ul>
           </div>
-          <div class="section-field mb-2">
-            <div class="field-widget"> <i class="glyph-icon flaticon-user"></i>
-              <input id="name" class="web" type="text" placeholder="User name" name="web">
+          <form (submit)="onSubmit()" [formGroup]="myForm">
+            <div class="section-field mb-2">
+              <div class="field-widget"> <i class="glyph-icon flaticon-user" [style.color]="myForm.controls.email.invalid && myForm.controls.email.touched ? 'red' : 'white'"></i>
+                <input id="email" formControlName="email" class="web" type="text" placeholder="E-mail address" >
+              </div>
+              <div class="error">
+                <p *ngIf="myForm.controls.email.invalid && myForm.controls.email.touched">Bad e-mail format!</p>
+              </div>
             </div>
-          </div>
-          <div class="section-field mb-1">
-            <div class="field-widget"> <i class="glyph-icon flaticon-padlock"></i>
-              <input id="Password" class="Password" type="password" placeholder="Password" name="Password">
+            <div class="section-field mb-1">
+              <div class="field-widget"> <i class="glyph-icon flaticon-padlock" [style.color]="myForm.controls.password.invalid && myForm.controls.password.touched ? 'red' : 'white'"></i>
+                <input id="Password" formControlName="password" class="Password" type="password" placeholder="Password" name="Password">
+              </div>
+              <div class="error">
+                <p *ngIf="myForm.controls.password.invalid && myForm.controls.password.touched">Password missing!</p>
+              </div>
             </div>
-          </div>
-          <div class="section-field text-uppercase"> <a href="#" class="float-right text-white">Forgot Password?</a> </div>
-          <div class="clearfix"></div>
-          <div class="section-field text-uppercase text-center mt-2"> <a class="button  btn-lg btn-theme full-rounded animated right-icn"><span>sign in<i class="glyph-icon flaticon-hearts" aria-hidden="true"></i></span></a> </div>
-          <div class="clearfix"></div>
-          <div class="section-field mt-2 text-center text-white">
-            <p class="lead mb-0">Don’t have an account? <a class="text-white" routerLink="/registration" routerLinkActive="active"><u>Register now!</u> </a></p>
-          </div>
+            <div class="section-field text-uppercase"> <a href="#" class="float-right text-white">Forgot Password?</a> </div>
+            <div class="clearfix"></div>
+            <div class="section-field text-uppercase text-center mt-2">
+              <a class="button  btn-lg btn-theme full-rounded animated right-icn">
+                <button type="submit">
+                  <span>sign in<i class="glyph-icon flaticon-hearts" aria-hidden="true"></i></span>
+                </button>
+              </a>
+            </div>
+            <div class="clearfix"></div>
+            <div class="section-field mt-2 text-center text-white">
+              <p class="lead mb-0">Don’t have an account? <a class="text-white" routerLink="/registration" routerLinkActive="active"><u>Register now!</u> </a></p>
+            </div>
+          </form>
         </div>
       </div>
     </div>

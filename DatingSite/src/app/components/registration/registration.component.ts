@@ -12,9 +12,6 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 export class RegistrationComponent implements OnInit {
   user: User;
   myForm: FormGroup;
-
-  passWdIsValid: true;
-
   passWdForValid: string;
 
   constructor(private userService: UserService, private router: Router) {
