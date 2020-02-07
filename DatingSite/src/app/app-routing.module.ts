@@ -8,6 +8,7 @@ import { TesterComponentComponent } from './components/tester-component/tester-c
 import { MyProfileComponentComponent } from './components/my-profile-component/my-profile-component.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { ProfilesComponent } from './components/profiles/profiles.component';
+import { ContactComponentComponent } from './components/contact-component/contact-component.component';
 
 
 const routes: Routes = [
@@ -18,7 +19,8 @@ const routes: Routes = [
   //for test!!!!
   { path: 'test', component: TesterComponentComponent },
   { path: 'myProfile', component: MyProfileComponentComponent },
-  { path: 'profiles', component: ProfilesComponent }
+  { path: 'profiles', component: ProfilesComponent },
+  { path: 'contact', component: ContactComponentComponent }
 ];
 
 @NgModule({
