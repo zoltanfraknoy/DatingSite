@@ -12,11 +12,11 @@
             <div class="col-lg-5 col-md-12 mt-5 sm-mt-0">
               <div class="banner-form">
                 <h4>dating with Cupid love Your perfect match is just a click away</h4>
-                <form class="form-inner" [formGroup]="userFilterForm" (ngSubmit)="onSubmit()">
+                <form class="form-inner">
                   <div class="form-group">
                     <label class="col-md-4 control-label">I am a</label>
                     <div class="col-md-8">
-                      <select class="selectpicker" formControlName="searcherGender">
+                      <select class="selectpicker">
                         <option>Man</option>
                         <option>Woman</option>
                       </select>
@@ -25,7 +25,7 @@
                   <div class="form-group">
                     <label class="col-md-4 control-label">Seeking a</label>
                     <div class="col-md-8">
-                      <select class="selectpicker" formControlName="targetGender">
+                      <select class="selectpicker">
                         <option>Man</option>
                         <option>Woman</option>
                       </select>
@@ -34,7 +34,7 @@
                   <div class="form-group">
                     <label class="col-md-4 control-label">From</label>
                     <div class="col-md-8">
-                      <select class="selectpicker" formControlName="targetAgeMin">
+                      <select class="selectpicker">
                         
                         <option>18</option>
                         <option>19</option>
