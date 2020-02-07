@@ -6,6 +6,8 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class UserFilterService {
 
+
+
   userFilterForm = new FormGroup({
     searcherGender: new FormControl(''),
     targetGender: new FormControl(''),
@@ -16,10 +18,6 @@ export class UserFilterService {
   constructor() { }
 
 
-
-  onSubmit(){
-
-  }
 
 }
 
