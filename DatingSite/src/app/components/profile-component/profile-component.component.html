@@ -8,7 +8,7 @@
                         <li><img src="../../../assets/images/profile/01.jpg" alt="" width="150" height="150" /></li>
                         <li>
                             <div class="profile-text">
-                                <h2>shara blah</h2>
+                                <h2>{{user.name}}</h2>
                                 <h5>25 Years Old USA</h5>
                             </div>
                         </li>
@@ -35,52 +35,35 @@
                         <tbody>
                             <tr>
                                 <td>Gender</td>
-                                <td>Female</td>
-                                <td>Education</td>
-                                <td>Diploma in Design</td>
-                            </tr>
-                            <tr class="tr-bg">
-                                <td>Age</td>
-                                <td>25 Years old</td>
-                                <td>Language</td>
-                                <td>English, Spanish</td>
-                            </tr>
-                            <tr>
-                                <td>Country</td>
-                                <td>usa</td>
+                                <td>{{user.gender}}</td>
                                 <td>Height</td>
-                                <td>168 cm</td>
+                                <td>{{user.height}}</td>
                             </tr>
                             <tr class="tr-bg">
-                                <td>Birth Date</td>
-                                <td>24 May 1991</td>
+                                <td>Eye color</td>
+                                <td>{{user.eyeColor}}</td>
+                                <td>Hair color</td>
+                                <td>{{user.hairColor}}</td>
+                            </tr>
+                            <tr>
+                                <td>City</td>
+                                <td>{{user.city}}</td>
+                                <td>Horoscope</td>
+                                <td>{{user.horoscope}}</td>
+                            </tr>
+                            <tr class="tr-bg">
+                                <td>Birth Year</td>
+                                <td>{{user.birthYear}}</td>
                                 <td>Smoking</td>
-                                <td>Rarely</td>
+                                <td>{{user.isSmoking}}</td>
                             </tr>
                             <tr>
-                                <td>Relationship</td>
-                                <td>Single</td>
-                                <td>Eye Colour</td>
-                                <td>Black</td>
+                                <td>Looking for a</td>
+                                <td>{{user.intrestedIn}}</td>
+                                <td>Body shape</td>
+                                <td>{{user.bodyShape}}</td>
                             </tr>
-                            <tr class="tr-bg">
-                                <td>Looking For a</td>
-                                <td>Man</td>
-                                <td>Marital Status</td>
-                                <td>Single</td>
-                            </tr>
-                            <tr>
-                                <td>Work as</td>
-                                <td>Designer</td>
-                                <td>Diet</td>
-                                <td>Vegetarian</td>
-                            </tr>
-                            <tr class="tr-bg">
-                                <td>Birth Date</td>
-                                <td>24 May 1991</td>
-                                <td>Kids</td>
-                                <td>No</td>
-                            </tr>
+
                         </tbody>
                     </table>
                 </div>
@@ -115,6 +98,47 @@
                 </p>
             </div>
         </div>
+
+
+        <h4 class="title divider-3 mb-5 sm-mb-3" style="padding-top: 40px;">Things I'm interested in</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table table-bordered text-center mb-0">
+                        <tbody>
+                            <tr>
+                                <td>Movies</td>
+                                <td><input type="checkbox"  disabled></td>
+                                <td>Sports</td>
+                                <td><input type="checkbox"  disabled></td>
+                            </tr>
+                            <tr class="tr-bg">
+                                <td>Music</td>
+                                <td><input type="checkbox" disabled></td>
+                                <td>Books</td>
+                                <td><input type="checkbox"  disabled></td>
+                            </tr>
+                            <tr>
+                                <td>Culture</td>
+                                <td><input type="checkbox"  disabled></td>
+                                <td>Travel</td>
+                                <td><input type="checkbox"  disabled></td>
+                            </tr>
+                            <tr class="tr-bg">
+                                <td>Technology</td>
+                                <td><input type="checkbox"  disabled></td>
+                                <td>Politics</td>
+                                <td><input type="checkbox" :checked disabled></td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
     </div>
-    <p></p>
+</section>
+
 <app-footer-component></app-footer-component>
