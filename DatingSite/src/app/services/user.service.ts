@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import {User, UserLogin} from '../interfaces/user';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {UserResponse} from '../interfaces/user-response';
-import {BehaviorSubject} from 'rxjs';
+import {BehaviorSubject, Observable} from 'rxjs';
+import { share, map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -26,5 +27,12 @@ export class UserService {
   loginUser(usr: UserLogin) {
     console.log('login try');
     // TODO
+  }
+
+  public getUser(id: number): Observable<User> {
+    return this.http.get<UserResponse>(
+      this.SERVER_URL + '?id=' + id,
+      { withCredentials: true }
+    ).pipe( map( response => response.users[0] ) );
   }
 }

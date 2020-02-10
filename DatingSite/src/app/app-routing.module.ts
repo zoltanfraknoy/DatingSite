@@ -5,7 +5,7 @@ import { from } from 'rxjs';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { LoginComponentComponent } from './components/login-component/login-component.component';
 import { TesterComponentComponent } from './components/tester-component/tester-component.component';
-import { MyProfileComponentComponent } from './components/my-profile-component/my-profile-component.component';
+import { ProfileComponentComponent } from './components/profile-component/profile-component.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { ProfilesComponent } from './components/profiles/profiles.component';
 import { ContactComponentComponent } from './components/contact-component/contact-component.component';
@@ -18,9 +18,10 @@ const routes: Routes = [
   { path: 'login', component: LoginComponentComponent },
   //for test!!!!
   { path: 'test', component: TesterComponentComponent },
-  { path: 'myProfile', component: MyProfileComponentComponent },
+  { path: 'myProfile', component: ProfileComponentComponent },
   { path: 'profiles', component: ProfilesComponent },
-  { path: 'contact', component: ContactComponentComponent }
+  { path: 'contact', component: ContactComponentComponent },
+  { path: 'profiles/:id', component: ProfileComponentComponent }
 ];
 
 @NgModule({

@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MyProfileComponentComponent } from './my-profile-component.component';
+import { MyProfileComponentComponent } from './profile-component.component';
 
 describe('MyProfileComponentComponent', () => {
   let component: MyProfileComponentComponent;

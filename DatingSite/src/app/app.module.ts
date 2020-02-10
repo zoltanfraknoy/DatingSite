@@ -8,7 +8,7 @@ import { MainPageComponent } from './components/main-page/main-page.component';
 import { TesterComponentComponent } from './components/tester-component/tester-component.component';
 import { FooterComponentComponent } from './components/footer-component/footer-component.component';
 import { ContactComponentComponent } from './components/contact-component/contact-component.component';
-import { MyProfileComponentComponent } from './components/my-profile-component/my-profile-component.component';
+import { ProfileComponentComponent } from './components/profile-component/profile-component.component';
 import { LoginComponentComponent } from './components/login-component/login-component.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import {ErrorPageComponent} from './components/error-page/error-page.component';
@@ -30,7 +30,7 @@ import { ProfilesComponent } from './components/profiles/profiles.component';
     LoginComponentComponent,
     RegistrationComponent,
     ErrorPageComponent,
-    MyProfileComponentComponent,
+    ProfileComponentComponent,
     InfoLineComponent,
     ProfilesComponent
   ],
