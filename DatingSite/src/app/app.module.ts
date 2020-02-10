@@ -16,6 +16,7 @@ import {InfoLineComponent} from './components/info-line/info-line.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfilesComponent } from './components/profiles/profiles.component';
+import { ModifyUserModalComponent } from './components/modify-user-modal/modify-user-modal.component';
 
 
 
@@ -32,7 +33,8 @@ import { ProfilesComponent } from './components/profiles/profiles.component';
     ErrorPageComponent,
     ProfileComponentComponent,
     InfoLineComponent,
-    ProfilesComponent
+    ProfilesComponent,
+    ModifyUserModalComponent
   ],
   imports: [
     BrowserModule,

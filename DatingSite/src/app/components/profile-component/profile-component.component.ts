@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { User } from 'src/app/interfaces/user';
 import { UserService } from 'src/app/services/user.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModifyUserModalComponent } from '../modify-user-modal/modify-user-modal.component';
 
 @Component({
   selector: 'app-profile-component',
