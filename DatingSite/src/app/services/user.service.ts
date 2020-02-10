@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {User, UserLogin} from '../interfaces/user';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {UserResponse} from '../interfaces/user-response';
 import {BehaviorSubject} from 'rxjs';
 
@@ -17,10 +17,10 @@ export class UserService {
   }
 
   addUser(usr: User): void {
-    //const headers = { 'Content-Type': 'application/json'};
-    //const JsonBodyForUser = [ 'name': usr.name, 'password': usr., 'email': 'tester@gmail.com', 'birthDate': '2020-02-05'];
+    const json = JSON.stringify(usr);
     // írd át promiszra baszki
-    this.http.post<UserResponse>(this.SERVER_URL, {JsonBodyForUser}, {headers}).subscribe();
+    const headers = new HttpHeaders().set('Content-Type', 'application/json; charset=utf-8');
+    this.http.post<UserResponse>(this.SERVER_URL, json, {withCredentials: true, headers}).subscribe();
   }
 
   loginUser(usr: UserLogin) {
