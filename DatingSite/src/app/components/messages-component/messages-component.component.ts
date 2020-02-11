@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {Message} from 'src/app/interfaces/user';
 
 @Component({
@@ -8,7 +8,8 @@ import {Message} from 'src/app/interfaces/user';
 })
 export class MessagesComponentComponent implements OnInit {
 
-  messeage: Message [];
+@Input()
+message: Message;
 
   constructor() { }
   
