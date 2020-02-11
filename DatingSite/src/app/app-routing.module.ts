@@ -9,6 +9,7 @@ import { ProfileComponentComponent } from './components/profile-component/profil
 import { RegistrationComponent } from './components/registration/registration.component';
 import { ProfilesComponent } from './components/profiles/profiles.component';
 import { ContactComponentComponent } from './components/contact-component/contact-component.component';
+import { MessagesComponentComponent } from './components/messages-component/messages-component.component';
 
 
 const routes: Routes = [
@@ -21,7 +22,7 @@ const routes: Routes = [
   { path: 'myProfile', component: ProfileComponentComponent },
   { path: 'profiles', component: ProfilesComponent },
   { path: 'contact', component: ContactComponentComponent },
-  { path: 'profiles/:id', component: ProfileComponentComponent }
+  {path: 'messages', component: MessagesComponentComponent}
 ];
 
 @NgModule({

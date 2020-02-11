@@ -16,7 +16,7 @@ import {InfoLineComponent} from './components/info-line/info-line.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfilesComponent } from './components/profiles/profiles.component';
-import { ModifyUserModalComponent } from './components/modify-user-modal/modify-user-modal.component';
+import { MessagesComponentComponent } from './components/messages-component/messages-component.component';
 
 
 
@@ -34,7 +34,7 @@ import { ModifyUserModalComponent } from './components/modify-user-modal/modify-
     ProfileComponentComponent,
     InfoLineComponent,
     ProfilesComponent,
-    ModifyUserModalComponent
+    MessagesComponentComponent
   ],
   imports: [
     BrowserModule,

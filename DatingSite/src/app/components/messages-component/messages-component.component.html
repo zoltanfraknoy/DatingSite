@@ -1,0 +1,19 @@
+<app-header-component></app-header-component>
+<section class="message">
+    <input [(ngModel)]="searchText" placeholder="Search...">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Messages</th>
+            </tr>
+        </thead>
+       <!-- <tbody>
+            <tr app-profiles *ngFor="let m of message | filter: searchText" [message]="m"></tr>
+            <tr *ngIf="message" .length==0">
+                <td colspan="2" style="text-align: center;">You haven't message yet.</td>
+            </tr>
+        </tbody>  -->
+    </table>
+</section>
+<app-footer-component></app-footer-component>

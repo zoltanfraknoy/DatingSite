@@ -32,3 +32,12 @@ export interface UserLogin {
   password: string;
 }
 
+export interface Message{
+  id: number;
+  author: string;
+  partner: string;
+  text: string;
+  creationDate: Date;
+  /*conversation: Conversation;*/
+}
+
