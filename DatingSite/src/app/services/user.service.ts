@@ -17,7 +17,7 @@ export class UserService {
     this.users = new BehaviorSubject([]);
   }
 
- 
+
 
   addUser(usr: User): void {
     const json = JSON.stringify(usr);
@@ -27,8 +27,24 @@ export class UserService {
   }
 
   loginUser(usr: UserLogin) {
-    console.log('login try');
     // TODO
+    // login
+    const loginData = new FormData();
+    loginData.append('email', usr.email);
+    loginData.append('password', usr.password);
+    this.http.post<any>(this.SERVER_URL + '/login', loginData, {withCredentials: true}).subscribe(
+      data => {
+        //resault here example:
+        // data.resault
+        // save data to localStorge key / text or/maybe whatever
+        // you can check it everywhere like this:  localStorage.getItem('currentUser');
+        localStorage.setItem('currentUser', 'test');
+        }, //
+      error => {
+        //error message
+        console.log(error.message);
+      }
+    );
   }
 //Lekérjük a users tömböt
   getUsers(): BehaviorSubject<User[]> {
