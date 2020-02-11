@@ -11,7 +11,7 @@ import { share, map } from 'rxjs/operators';
 export class UserService {
 
   private users: BehaviorSubject<User[]>;
-  private readonly SERVER_URL = 'http://localhost:8080/rest/';
+  private readonly SERVER_URL = 'https://intense-meadow-41798.herokuapp.com/rest/';
 
   constructor(private http: HttpClient) {
     this.users = new BehaviorSubject([]);

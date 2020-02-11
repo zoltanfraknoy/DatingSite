@@ -23,6 +23,8 @@ export interface User {
   travel?: boolean;
   technology?: boolean;
   politics?: boolean;
+  lookingForAgeMin?: number;
+  lookingForAgeMax?: number;
 
 
 }
