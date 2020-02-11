@@ -11,7 +11,7 @@ import { share, map } from 'rxjs/operators';
 export class UserService {
 
   private users: BehaviorSubject<User[]>;
-  private readonly SERVER_URL = 'https://intense-meadow-41798.herokuapp.com/rest/';
+  private readonly SERVER_URL = 'https://intense-meadow-41798.herokuapp.com/';
 
   constructor(private http: HttpClient) {
     this.users = new BehaviorSubject([]);
@@ -23,7 +23,7 @@ export class UserService {
     const json = JSON.stringify(usr);
     // írd át promiszra baszki
     const headers = new HttpHeaders().set('Content-Type', 'application/json; charset=utf-8');
-    this.http.post<UserResponse>(this.SERVER_URL+"register", json, {withCredentials: true, headers}).subscribe();
+    this.http.post<UserResponse>(this.SERVER_URL+"rest/register", json, {withCredentials: true, headers}).subscribe();
   }
 
   loginUser(usr: UserLogin) {
@@ -49,7 +49,7 @@ export class UserService {
 //Lekérjük a users tömböt
   getUsers(): BehaviorSubject<User[]> {
     this.http.get<UserResponse>(
-      this.SERVER_URL + "profiles",
+      this.SERVER_URL + "rest/profiles",
       //szűrés hogyan??? default? maximalizálni a kapott válaszokat?
       //kor -tól -ig, kit keres?, hányadiktól hányadik találatig
        { withCredentials: true })
@@ -67,7 +67,7 @@ export class UserService {
   //Lekérünk 1 usert az ID alapján
   public getUser(id: number): Observable<User> {
     return this.http.get<UserResponse>(
-      this.SERVER_URL + '?id=' + id,
+      this.SERVER_URL + 'rest/?id=' + id,
       { withCredentials: true }
     ).pipe( map( response => response.users[0] ) );
   }
