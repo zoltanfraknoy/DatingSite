@@ -32,7 +32,7 @@ export class UserService {
     const loginData = new FormData();
     loginData.append('email', usr.email);
     loginData.append('password', usr.password);
-    this.http.post<any>(this.SERVER_URL + '/login', loginData, {withCredentials: true}).subscribe(
+    this.http.post<any>(this.SERVER_URL + 'login', loginData, {withCredentials: true}).subscribe(
       data => {
         //resault here example:
         // data.resault
@@ -49,8 +49,9 @@ export class UserService {
 //Lekérjük a users tömböt
   getUsers(): BehaviorSubject<User[]> {
     this.http.get<UserResponse>(
-      this.SERVER_URL,
+      this.SERVER_URL + "profiles",
       //szűrés hogyan??? default? maximalizálni a kapott válaszokat?
+      //kor -tól -ig, kit keres?, hányadiktól hányadik találatig
        { withCredentials: true })
       .subscribe(resp => this.updateUsers(resp));
     return this.users;
