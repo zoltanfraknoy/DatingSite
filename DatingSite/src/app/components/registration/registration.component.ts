@@ -3,6 +3,7 @@ import {User} from '../../interfaces/user';
 import {Router} from '@angular/router';
 import {UserService} from '../../services/user.service';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
+import { MatDatepickerModule } from '@angular/material';
 
 @Component({
   selector: 'app-registration',
@@ -13,6 +14,7 @@ export class RegistrationComponent implements OnInit {
   user: User;
   myForm: FormGroup;
   passWdForValid: string;
+  myDatepicker: any;
 
   constructor(private userService: UserService, private router: Router) {
     this.user = {
@@ -36,6 +38,7 @@ export class RegistrationComponent implements OnInit {
       email: new FormControl(this.user.email,
         [ Validators.required, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')]
       ),
+      birthDate: new FormControl(this.user.birthDate, Validators.required),
       password: new FormControl(this.user.password, Validators.required),
       passWd2: new FormControl(this.passWdForValid, Validators.required),
     });

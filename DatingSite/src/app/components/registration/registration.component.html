@@ -22,6 +22,11 @@
                   <p *ngIf="myForm.controls.email.invalid && myForm.controls.email.touched">Bad e-mail format!</p>
                 </div>
               </div>
+                <div class="section-field mb-3">
+                  <div class="field-widget"> <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                    <input formControlName="birthDate" type="text" placeholder="YYYY-MM-DD">
+                  </div>
+                </div>
               <div class="section-field mb-3">
                 <div class="field-widget"> <i class="glyph-icon flaticon-padlock" [style.color]="myForm.controls.password.invalid && myForm.controls.password.touched ? 'red' : 'white'"></i>
                   <input formControlName="password" id="Password" class="Password" type="password" placeholder="Password">
