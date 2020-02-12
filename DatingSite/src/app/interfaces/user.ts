@@ -34,12 +34,22 @@ export interface UserLogin {
   password: string;
 }
 
-export interface Message{
+export interface Message {
   id: number;
   author: string;
   partner: string;
   text: string;
   creationDate: Date;
   /*conversation: Conversation;*/
+}
+
+export interface Filter {
+
+  minAge?: number;
+  maxAge?: number;
+  lookingFor?: string;
+  startingNumber?: number;
+  endingNumber?: number;
+
 }
 
