@@ -19,6 +19,12 @@ export class ProfileComponentComponent implements OnInit {
   constructor( private userService: UserService, private modalService: NgbModal) { }
 
   ngOnInit() {
+    this.route.data.subscribe(data => {
+      switch (data.kind) {
+        case 'ownProfile':
+
+      }
+
   }
 
   modify(): void {
