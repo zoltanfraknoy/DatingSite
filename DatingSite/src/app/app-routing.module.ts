@@ -17,6 +17,7 @@ const routes: Routes = [
   { path: 'main', component: MainPageComponent },
   { path: 'registration', component: RegistrationComponent },
   { path: 'login', component: LoginComponentComponent },
+  { path: 'login/authError', component: LoginComponentComponent },
   //for test!!!!
   { path: 'test', component: TesterComponentComponent },
   { path: 'myProfile', component: ProfileComponentComponent },

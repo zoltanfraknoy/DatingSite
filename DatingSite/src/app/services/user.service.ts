@@ -46,7 +46,7 @@ export class UserService {
         }, //
       error => {
         //error message
-        this.router.navigateByUrl('/login');
+        this.router.navigateByUrl('/login/authError');
       }
     );
   }

@@ -5,15 +5,14 @@
       <div class="col-md-6">
         <div class="login-1-form clearfix text-center">
           <h4 class="title divider-3 text-white">SIGN IN</h4>
-          <div class="login-1-social mt-5 mb-5 text-center clearfix">
-            <ul class="list-inline text-capitalize">
-              <li><a class="fb" href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
-              <li><a class="gplus" href="#"><i class="fa fa-google-plus"></i> google+</a></li>
+          <div class="section-field text-uppercase text-center mt-2" *ngIf="this.router.url == '/login/authError'">
+            <ul class="list-inline text-center">
+              <li><a class="authErrorBubble">Invalid e-mail, or password!</a></li>
             </ul>
           </div>
           <form (submit)="onSubmit()" [formGroup]="myForm">
             <div class="section-field mb-2">
-              <div class="field-widget"> <i class="glyph-icon flaticon-user" [style.color]="myForm.controls.email.invalid && myForm.controls.email.touched ? 'red' : 'white'"></i>
+              <div class="field-widget"> <i class="glyph-icon flaticon-user" [style.color]="this.router.url == '/login/authError' || (myForm.controls.email.invalid && myForm.controls.email.touched) ? 'red' : 'white'"></i>
                 <input id="email" formControlName="email" class="web" type="text" placeholder="E-mail address" >
               </div>
               <div class="error">
@@ -21,11 +20,8 @@
               </div>
             </div>
             <div class="section-field mb-1">
-              <div class="field-widget"> <i class="glyph-icon flaticon-padlock" [style.color]="myForm.controls.password.invalid && myForm.controls.password.touched ? 'red' : 'white'"></i>
+              <div class="field-widget"> <i class="glyph-icon flaticon-padlock" [style.color]="this.router.url == '/login/authError' ? 'red' : 'white'"></i>
                 <input id="Password" formControlName="password" class="Password" type="password" placeholder="Password" name="Password">
-              </div>
-              <div class="error">
-                <p *ngIf="myForm.controls.password.invalid && myForm.controls.password.touched">Password missing!</p>
               </div>
             </div>
             <div class="section-field text-uppercase"> <a href="#" class="float-right text-white">Forgot Password?</a> </div>
