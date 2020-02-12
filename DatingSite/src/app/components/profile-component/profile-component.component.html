@@ -33,7 +33,7 @@
                 <div class="table-responsive">
                     <table class="table table-bordered text-center mb-0">
                         <tbody>
-                          <tr>
+                           <tr>
                                 <td>Gender</td>
                                 <td>{{user.gender}}</td>
                                 <td>Height</td>
@@ -63,14 +63,14 @@
                                 <td>Body shape</td>
                                 <td>{{user.bodyShape}}</td>
                             </tr>
- 
+
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
 
-        <a class="button btn-lg full-rounded btn-colored animated right-icn col align-self-end"><span>Change your parameters<i class="glyph-icon flaticon-hearts" aria-hidden="true"></i></span></a>
+        
 
         <div class="row mt-5 sm-mt-3">
             <div class="col-md-12 text-left">
@@ -101,7 +101,7 @@
             </div>
         </div>
 
-        <a class="button btn-lg full-rounded btn-colored animated right-icn col align-self-end"><span>Change your introduction<i class="glyph-icon flaticon-hearts" aria-hidden="true"></i></span></a>
+    
 
 
        <h4 class="title divider-3 mb-5 sm-mb-3" style="padding-top: 40px;">Things I'm interested in</h4>
@@ -111,33 +111,28 @@
                     <table class="table table-bordered text-center mb-0">
                         <tbody>
                             <tr>
-
-                               <!--  <div *ngIf="condition; else elseBlock">Content to render when condition is true.</div>
-<ng-template #elseBlock>Content to render when condition is false.</ng-template> -->
                                 <td>Movies</td>
-                                <td><div *ngIf="user.movies; else elseBlock"><input type="checkbox" : checked  disabled></div>
-                                    <ng-template #elseBlock><input type="checkbox"  disabled></ng-template>
-                                    </td>
+                                <td><input type="checkbox"  disabled></td>
                                 <td>Sports</td>
-                                <td><input *ngIf="" type="checkbox"  disabled></td>
+                                <td><input type="checkbox"  disabled></td>
                             </tr>
                             <tr class="tr-bg">
                                 <td>Music</td>
-                                <td><input *ngIf="" type="checkbox" disabled></td>
+                                <td><input type="checkbox" disabled></td>
                                 <td>Books</td>
-                                <td><input *ngIf="" type="checkbox"  disabled></td>
+                                <td><input type="checkbox"  disabled></td>
                             </tr>
                             <tr>
                                 <td>Culture</td>
-                                <td><input *ngIf="" type="checkbox"  disabled></td>
+                                <td><input type="checkbox"  disabled></td>
                                 <td>Travel</td>
-                                <td><input *ngIf="" type="checkbox"  disabled></td>
+                                <td><input type="checkbox"  disabled></td>
                             </tr>
                             <tr class="tr-bg">
                                 <td>Technology</td>
-                                <td><input *ngIf="" type="checkbox"  disabled></td>
+                                <td><input type="checkbox"  disabled></td>
                                 <td>Politics</td>
-                                <td><input *ngIf="" type="checkbox" :checked disabled></td>
+                                <td><input type="checkbox" :checked disabled></td>
                             </tr>
 
 
@@ -146,7 +141,7 @@
                 </div>
             </div>
         </div>
-        <a class="button btn-lg full-rounded btn-colored animated right-icn col align-self-end"><span>Change your interests<i class="glyph-icon flaticon-hearts" aria-hidden="true"></i></span></a>
+        <a class="button btn-lg full-rounded btn-colored animated right-icn col align-self-end" style="margin-top: 40px;"><span>Change your profile<i class="glyph-icon flaticon-hearts" aria-hidden="true"></i></span></a>
     </div>
     
     

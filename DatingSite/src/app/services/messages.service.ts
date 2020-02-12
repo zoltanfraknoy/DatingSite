@@ -13,7 +13,7 @@ import { map } from 'rxjs/operators';
 export class MessagesService {
 
   private messages: BehaviorSubject<Message[]>;
-  private readonly SERVER_URL = '/conversation';
+  private readonly SERVER_URL = 'https://intense-meadow-41798.herokuapp.com/conversation';
 
   constructor(private http: HttpClient) { 
     this.messages = new BehaviorSubject([]);

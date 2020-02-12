@@ -3,7 +3,6 @@ import { User } from 'src/app/interfaces/user';
 import { UserService } from 'src/app/services/user.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ModifyUserModalComponent } from '../modify-user-modal/modify-user-modal.component';
-import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile-component',
@@ -17,19 +16,10 @@ export class ProfileComponentComponent implements OnInit {
 
 
 
-  constructor(private userService: UserService, private modalService: NgbModal, private route: ActivatedRoute, private router: Router) { }
+  constructor( private userService: UserService, private modalService: NgbModal) { }
 
   ngOnInit() {
-    this.route.data.subscribe(data => {
-      switch (data.kind) {
-        case 'ownProfile':
-
-      }
-
-    });
   }
-
-
 
   modify(): void {
     const modalRef = this.modalService.open(ModifyUserModalComponent);
