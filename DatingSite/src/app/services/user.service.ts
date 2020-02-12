@@ -4,6 +4,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {UserResponse} from '../interfaces/user-response';
 import {BehaviorSubject, Observable} from 'rxjs';
 import { share, map } from 'rxjs/operators';
+import {Router} from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class UserService {
   private users: BehaviorSubject<User[]>;
   private readonly SERVER_URL = 'https://intense-meadow-41798.herokuapp.com/';
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router) {
     this.users = new BehaviorSubject([]);
   }
 
@@ -23,7 +24,7 @@ export class UserService {
     const json = JSON.stringify(usr);
     // írd át promiszra baszki
     const headers = new HttpHeaders().set('Content-Type', 'application/json; charset=utf-8');
-    this.http.post<UserResponse>(this.SERVER_URL+"rest/register", json, {withCredentials: true, headers}).subscribe();
+    this.http.post<UserResponse>(this.SERVER_URL + "rest/register", json, {withCredentials: true, headers}).subscribe();
   }
 
   loginUser(usr: UserLogin) {
@@ -39,10 +40,13 @@ export class UserService {
         // save data to localStorge key / text or/maybe whatever
         // you can check it everywhere like this:  localStorage.getItem('currentUser');
         localStorage.setItem('currentUser', 'test');
+        console.log(data.response);
+        // jump to:
+        this.router.navigateByUrl('/myProfile');
         }, //
       error => {
         //error message
-        console.log(error.message);
+        this.router.navigateByUrl('/login/authError');
       }
     );
   }
@@ -52,6 +56,7 @@ export class UserService {
       this.SERVER_URL + "rest/profiles",
       //szűrés hogyan??? default? maximalizálni a kapott válaszokat?
       //kor -tól -ig, kit keres?, hányadiktól hányadik találatig
+      //minAge, maxAge, lookingFor, startingNumber, endingNumber
        { withCredentials: true })
       .subscribe(resp => this.updateUsers(resp));
     return this.users;

@@ -8,7 +8,30 @@
   text-align: left;
   height: 5px;
 }
-.button{
+
+.error_auth{
+  color: red;
+  height: 2px;
+}
+
+.authErrorBubble {
+  background: #db5442;
+  border-radius: 3px;
+  color: #fff;
+  display: block;
+  font-size: 14px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: #d75a53;
+  background: -webkit-gradient(linear, right top, left top, from(#d75a53), to(#ff2d55));
+  background: linear-gradient(-90deg, #d75a53, #ff2d55);
+}
+
+button{
   background-color: Transparent;
   border: 0;
+}
+
+.text-red{
+  color: red;
 }

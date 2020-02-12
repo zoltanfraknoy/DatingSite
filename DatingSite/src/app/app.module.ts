@@ -17,6 +17,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfilesComponent } from './components/profiles/profiles.component';
 import { MessagesComponentComponent } from './components/messages-component/messages-component.component';
+import { FirststepsComponent } from './components/firststeps/firststeps.component';
 
 
 
@@ -34,7 +35,8 @@ import { MessagesComponentComponent } from './components/messages-component/mess
     ProfileComponentComponent,
     InfoLineComponent,
     ProfilesComponent,
-    MessagesComponentComponent
+    MessagesComponentComponent,
+    FirststepsComponent
   ],
   imports: [
     BrowserModule,
