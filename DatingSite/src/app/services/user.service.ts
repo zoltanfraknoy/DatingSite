@@ -43,6 +43,9 @@ export class UserService {
       error => {
         //error message
         console.log(error.message);
+
+        //TODO redirect a sikeres bejelentkezést követően, és GET request a rest/myProfile-ra,
+        //ami visszaadja a saját profilt
       }
     );
   }
@@ -52,6 +55,7 @@ export class UserService {
       this.SERVER_URL + "rest/profiles",
       //szűrés hogyan??? default? maximalizálni a kapott válaszokat?
       //kor -tól -ig, kit keres?, hányadiktól hányadik találatig
+      //minAge, maxAge, lookingFor, startingNumber, endingNumber
        { withCredentials: true })
       .subscribe(resp => this.updateUsers(resp));
     return this.users;
