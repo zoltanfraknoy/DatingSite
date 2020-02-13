@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { User } from 'src/app/interfaces/user';
+import { User, Filter } from 'src/app/interfaces/user';
 import { Subscription } from 'rxjs';
 import { UserService } from 'src/app/services/user.service';
 
@@ -14,10 +14,10 @@ export class ProfilesComponent implements OnInit, OnDestroy {
   usersSubscription: Subscription;
 
   constructor(private userService: UserService) {
-    this.users=[];
+    this.users = [];
 
-   }
-//Feliratkozunk a service getUsers metódusára és megkapunk egy csini users tömböt
+  }
+  //Feliratkozunk a service getUsers metódusára és megkapunk egy csini users tömböt
   ngOnInit() {
     this.usersSubscription = this.userService.getUsers().subscribe(
       users => {
@@ -29,6 +29,14 @@ export class ProfilesComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.usersSubscription.unsubscribe();
+  }
+
+  doSearch(filter: Filter) {
+    //feliratkozni
+    this.userService.getUsers(filter).subscribe(users => {
+    this.users = users;
+    }
+    );
   }
 
 }

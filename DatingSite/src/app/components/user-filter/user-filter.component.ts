@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { User } from 'src/app/interfaces/user';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { User, Filter } from 'src/app/interfaces/user';
 import { UserService } from 'src/app/services/user.service';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 
@@ -14,6 +14,9 @@ export class UserFilterComponent implements OnInit {
   user: User;
   form: FormGroup;
 
+  @Output()
+  search: EventEmitter<Filter>;
+
   constructor(private userService: UserService, private fb: FormBuilder) {
 
     this.form = new FormGroup(
@@ -22,20 +25,20 @@ export class UserFilterComponent implements OnInit {
         ownGender: new FormControl('Male'),
         targetGender: new FormControl('Female'),
         ageMin: new FormControl(18),
-        ageMax: new FormControl(20)
+        ageMax: new FormControl(36)
       }
     );
-
+      this.search = new EventEmitter();
 
   }
 
   ngOnInit() {
     this.userService.getMyProfile().subscribe(u => {
       this.user = u;
-      this.form.controls['ageMin'].setValue(this.user.lookingForAgeMin);
-      this.form.controls['ageMax'].setValue(this.user.lookingForAgeMax);
+      this.form.controls['ageMin'].setValue(this.user.minAge);
+      this.form.controls['ageMax'].setValue(this.user.maxAge);
       this.form.controls['ownGender'].setValue(this.user.gender);
-      this.form.controls['targetGender'].setValue(this.user.interestedIn);
+      this.form.controls['targetGender'].setValue(this.user.interest);
     });
     this.createForm();
   }
@@ -44,6 +47,13 @@ export class UserFilterComponent implements OnInit {
     this.form = this.fb.group({
 
     });
+  }
+
+  onSearchClick(): void {
+    const f: Filter = {
+
+    };
+    this.search.emit(f);
   }
 
 }

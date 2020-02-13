@@ -21,17 +21,14 @@ const routes: Routes = [
   { path: 'login/signUpSuccess', component: LoginComponentComponent, data: { showSignUpMessage: true } },
   //for test!!!!
   { path: 'test', component: TesterComponentComponent },
-  { path: 'profiles', component: ProfilesComponent },
   { path: 'contact', component: ContactComponentComponent },
   { path: 'messages', component: MessagesComponentComponent },
   {
     path: 'profiles',
-    children: [
-      { path: 'myProfile', component: ProfileComponentComponent, data: { kind: 'ownProfile' } },
-      { path: ':id', component: ProfileComponentComponent, data: { kind: 'othersProfile' } },
-
-    ]
-  }
+    component: ProfilesComponent,
+  },
+  { path: 'profiles/myProfile', component: ProfileComponentComponent, data: { kind: 'ownProfile' } },
+  { path: 'profiles/:id', component: ProfileComponentComponent, data: { kind: 'othersProfile' } }
 ];
 
 @NgModule({

@@ -3,18 +3,18 @@ export interface User {
   name: string;
   email: string;
   password: string;
-  gender?: string;
+  age?: number;
+  aboutMe?: string;
   city?: string;
-  height?: number;
+  gender?: string;
   bodyShape?: string;
   eyeColor?: string;
   hairColor?: string;
   horoscope?: string;
-  isSmoking?: boolean;
-  interestedIn?: string;
+  smoking?: boolean;
+  interest?: string;
   birthYear?: number;
   birthDate: string;
-  aboutMe?: string;
   likesMovies?: boolean;
   likesSports?: boolean;
   likesMusic?: boolean;
@@ -23,8 +23,8 @@ export interface User {
   likesTravel?: boolean;
   likesTechnology?: boolean;
   likesPolitics?: boolean;
-  lookingForAgeMin?: number;
-  lookingForAgeMax?: number;
+  minAge?: number;
+  maxAge?: number;
 
 }
 
