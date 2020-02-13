@@ -47,4 +47,10 @@ export class AuthenticationService {
   public isLogged(): boolean {
     return this.currentUserId === undefined ? false : true;
   }
+
+  public signOut() {
+    this.http.get<any>(this.SERVER_URL + 'logout', {withCredentials: true}).subscribe();
+    this.currentUserId = undefined;
+    this.router.navigateByUrl('/login/loggedOut');
+  }
 }

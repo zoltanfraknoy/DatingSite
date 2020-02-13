@@ -8,11 +8,24 @@
 
           <p>Logged or not: {{ isLogged() }}</p>
 
-          <div class="section-field text-uppercase text-center mt-2" *ngIf="this.router.url == '/login/authError'">
+          <div *ngIf="errorMessage != ''" class="section-field text-uppercase text-center mt-2">
             <ul class="list-inline text-center">
-              <li><a class="authErrorBubble">Invalid e-mail, or password!</a></li>
+              <li><a class="authErrorBubble">{{ errorMessage }}</a></li>
             </ul>
           </div>
+
+          <div *ngIf="showLoggedOutMessage" class="section-field text-uppercase text-center mt-2">
+            <ul class="list-inline text-center">
+              <li><a class="successBubble"> Signed out successfully </a></li>
+            </ul>
+          </div>
+
+          <div *ngIf="showSignUpMessage" class="section-field text-uppercase text-center mt-2">
+            <ul class="list-inline text-center">
+              <li><a class="successBubble"> You have signed up successfully </a></li>
+            </ul>
+          </div>
+
           <form (submit)="onSubmit()" [formGroup]="myForm">
             <div class="section-field mb-2">
               <div class="field-widget"> <i class="glyph-icon flaticon-user" [style.color]="this.router.url == '/login/authError' || (myForm.controls.email.invalid && myForm.controls.email.touched) ? 'red' : 'white'"></i>

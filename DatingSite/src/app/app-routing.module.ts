@@ -17,7 +17,8 @@ const routes: Routes = [
   { path: 'main', component: MainPageComponent },
   { path: 'registration', component: RegistrationComponent },
   { path: 'login', component: LoginComponentComponent },
-  { path: 'login/authError', component: LoginComponentComponent },
+  { path: 'login/loggedOut', component: LoginComponentComponent, data: { showLoggedOutMessage: true } },
+  { path: 'login/signUpSuccess', component: LoginComponentComponent, data: { showSignUpMessage: true } },
   //for test!!!!
   { path: 'test', component: TesterComponentComponent },
   { path: 'profiles', component: ProfilesComponent },
