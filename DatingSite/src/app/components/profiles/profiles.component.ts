@@ -34,7 +34,7 @@ export class ProfilesComponent implements OnInit, OnDestroy {
   doSearch(filter: Filter) {
     //feliratkozni
     this.userService.getUsers(filter).subscribe(users => {
-    this.users = users;
+      this.users = users;
     }
     );
   }
