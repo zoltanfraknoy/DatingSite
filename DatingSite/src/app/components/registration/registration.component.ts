@@ -3,7 +3,6 @@ import {User} from '../../interfaces/user';
 import {Router} from '@angular/router';
 import {UserService} from '../../services/user.service';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import { MatDatepickerModule } from '@angular/material';
 
 @Component({
   selector: 'app-registration',

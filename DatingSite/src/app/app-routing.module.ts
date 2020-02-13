@@ -20,10 +20,17 @@ const routes: Routes = [
   { path: 'login/authError', component: LoginComponentComponent },
   //for test!!!!
   { path: 'test', component: TesterComponentComponent },
-  { path: 'myProfile', component: ProfileComponentComponent },
   { path: 'profiles', component: ProfilesComponent },
   { path: 'contact', component: ContactComponentComponent },
-  {path: 'messages', component: MessagesComponentComponent}
+  { path: 'messages', component: MessagesComponentComponent },
+  {
+    path: 'profiles',
+    children: [
+      { path: 'myProfile', component: ProfileComponentComponent, data: { kind: 'ownProfile' } },
+      { path: 'profile/:id', component: ProfileComponentComponent, data: { kind: 'othersProfile' } },
+
+    ]
+  }
 ];
 
 @NgModule({
