@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {User, UserLogin} from '../interfaces/user';
+import {User, UserLogin, Filter} from '../interfaces/user';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {UserResponse} from '../interfaces/user-response';
 import {BehaviorSubject, Observable} from 'rxjs';
@@ -52,7 +52,7 @@ export class UserService {
     );
   }
 //Lekérjük a users tömböt
-  getUsers(): BehaviorSubject<User[]> {
+  getUsers(filter?: Filter): BehaviorSubject<User[]> {
     this.http.get<UserResponse>(
       this.SERVER_URL + "rest/profiles",
       //szűrés hogyan??? default? maximalizálni a kapott válaszokat?
