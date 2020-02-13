@@ -22,9 +22,10 @@ export class ProfileComponentComponent implements OnInit {
   ngOnInit() {
     this.route.data.subscribe(data => {
       switch (data.kind) {
-        case 'ownProfile':
-          this.userService.getMyProfile().subscribe( u => this.user = u );
-         
+        case 'ownProfile': {
+          this.userService.getMyProfile().subscribe(u => this.user = u);
+          break;
+        }
       }
 
     });
