@@ -24,7 +24,9 @@ export class ProfileComponentComponent implements OnInit {
       switch (data.kind) {
         case 'ownProfile':
           this.userService.getMyProfile().subscribe( u => this.user = u );
+          break;
       }
+
     });
 
   }

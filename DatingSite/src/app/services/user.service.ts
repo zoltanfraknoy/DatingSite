@@ -13,7 +13,7 @@ export class UserService {
 
   private users: BehaviorSubject<User[]>;
   private readonly SERVER_URL = 'https://intense-meadow-41798.herokuapp.com/';
-  
+
 
   constructor(private http: HttpClient, private router: Router) {
     this.users = new BehaviorSubject([]);
@@ -43,7 +43,7 @@ export class UserService {
         localStorage.setItem('currentUser', 'test');
         console.log(data.response);
         // jump to:
-        this.router.navigateByUrl('/myProfile');
+        this.router.navigateByUrl('/profiles/myProfile');
       }, //
       error => {
         //error message
@@ -52,7 +52,7 @@ export class UserService {
     );
   }
   //Lekérjük a users tömböt
-  getUsers(f: Filter): BehaviorSubject<User[]> {
+  getUsers(f?: Filter): BehaviorSubject<User[]> {
     this.http.post<UserResponse>(
       this.SERVER_URL + "rest/profiles",
       //szűrés hogyan??? default? maximalizálni a kapott válaszokat?
@@ -79,7 +79,7 @@ export class UserService {
   }
 
 
-  public getMyProfile(): Observable<User>{
+  public getMyProfile(): Observable<User> {
     return this.http.get<UserResponse>(
       this.SERVER_URL + 'rest/myProfile',
       { withCredentials: true }
