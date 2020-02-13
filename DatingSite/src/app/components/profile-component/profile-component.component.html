@@ -9,7 +9,7 @@
                         <li>
                             <div class="profile-text">
                                 <h2>{{user.name}}</h2>
-                                <h5>25 Years Old USA</h5>
+                                <h5>{{user.age}}Years Old {{user.city}}</h5>
                             </div>
                         </li>
                     </ul>
@@ -141,7 +141,7 @@
                 </div>
             </div>
         </div>
-        <a class="button btn-lg full-rounded btn-colored animated right-icn col align-self-end" style="margin-top: 40px;"><span>Change your profile<i class="glyph-icon flaticon-hearts" aria-hidden="true"></i></span></a>
+        <a RouterLink="modify" class="button btn-lg full-rounded btn-colored animated right-icn col align-self-end" style="margin-top: 40px;"><span>Change your profile<i class="glyph-icon flaticon-hearts" aria-hidden="true"></i></span></a>
     </div>
     
     
