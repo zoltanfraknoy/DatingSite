@@ -4,6 +4,7 @@ import {Router} from '@angular/router';
 import {UserService} from '../../services/user.service';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 
+
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',

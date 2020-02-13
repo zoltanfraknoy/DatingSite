@@ -27,7 +27,7 @@ const routes: Routes = [
     path: 'profiles',
     children: [
       { path: 'myProfile', component: ProfileComponentComponent, data: { kind: 'ownProfile' } },
-      { path: 'profile/:id', component: ProfileComponentComponent, data: { kind: 'othersProfile' } },
+      { path: ':id', component: ProfileComponentComponent, data: { kind: 'othersProfile' } },
 
     ]
   }

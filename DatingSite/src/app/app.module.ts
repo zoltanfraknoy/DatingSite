@@ -18,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProfilesComponent } from './components/profiles/profiles.component';
 import { MessagesComponentComponent } from './components/messages-component/messages-component.component';
 import { FirststepsComponent } from './components/firststeps/firststeps.component';
+import { UserFilterComponent } from './components/user-filter/user-filter.component';
 
 
 
@@ -36,7 +37,8 @@ import { FirststepsComponent } from './components/firststeps/firststeps.componen
     InfoLineComponent,
     ProfilesComponent,
     MessagesComponentComponent,
-    FirststepsComponent
+    FirststepsComponent,
+    UserFilterComponent
   ],
   imports: [
     BrowserModule,
