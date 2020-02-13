@@ -25,7 +25,7 @@ export class LoginComponentComponent implements OnInit {
   onSubmit(): boolean {
     if (this.myForm.valid) {
       this.userService.login(this.myForm.value).subscribe(
-        () => { this.router.navigateByUrl('/profiles/myProfile'); },
+        () => { this.router.navigate(['profiles', 'myProfile']); },
           () => { this.router.navigateByUrl('/login/authError'); });
     } else {
       return false;
