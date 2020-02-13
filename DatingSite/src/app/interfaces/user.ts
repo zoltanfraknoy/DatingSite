@@ -13,7 +13,7 @@ export interface User {
   isSmoking?: boolean;
   interestedIn?: string;
   birthYear?: number;
-  birthDate?: Date;
+  birthDate?: string; // date
   aboutMe?: string;
   movies?: boolean;
   sports?: boolean;
