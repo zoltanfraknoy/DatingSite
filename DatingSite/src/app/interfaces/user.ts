@@ -13,19 +13,18 @@ export interface User {
   isSmoking?: boolean;
   interestedIn?: string;
   birthYear?: number;
-  birthDate?: string; // date
+  birthDate: string;
   aboutMe?: string;
-  movies?: boolean;
-  sports?: boolean;
-  music?: boolean;
-  books?: boolean;
-  culture?: boolean;
-  travel?: boolean;
-  technology?: boolean;
-  politics?: boolean;
+  likesMovies?: boolean;
+  likesSports?: boolean;
+  likesMusic?: boolean;
+  likesBooks?: boolean;
+  likesCulture?: boolean;
+  likesTravel?: boolean;
+  likesTechnology?: boolean;
+  likesPolitics?: boolean;
   lookingForAgeMin?: number;
   lookingForAgeMax?: number;
-
 
 }
 
@@ -49,4 +48,3 @@ export interface Filter {
   lookingFor?: string,
   pageNumber?: number
 }
-
