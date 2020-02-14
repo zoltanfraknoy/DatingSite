@@ -17,6 +17,8 @@ export class LoginComponentComponent implements OnInit {
   errorMessage: string;
   showLoggedOutMessage: boolean;
   showSignUpMessage: boolean;
+  showErrorMessage = false;
+  pendingProcess = false;
 
   constructor(private userService: AuthenticationService, private router: Router, private route: ActivatedRoute) {
     this.userlogin = {
@@ -24,16 +26,19 @@ export class LoginComponentComponent implements OnInit {
       password: '',
     };
     this.errorMessage = '';
+    this.pendingProcess = false;
     this.showLoggedOutMessage = this.route.snapshot.data && this.route.snapshot.data.showLoggedOutMessage;
     this.showSignUpMessage = this.route.snapshot.data && this.route.snapshot.data.showSignUpMessage;
   }
 
   onSubmit(): boolean {
     if (this.myForm.valid) {
+      this.pendingProcess = true;
       this.errorMessage = '';
       this.userService.login(this.myForm.value).subscribe(
         () => { this.router.navigate(['profiles', 'myProfile']); },
-          () => { this.errorMessage = 'Invalid e-mail, or password!'; });
+          () => { this.errorMessage = 'Invalid e-mail, or password!'; this.showErrorMessage = true; this.pendingProcess = false;});
+
     } else {
       return false;
     }

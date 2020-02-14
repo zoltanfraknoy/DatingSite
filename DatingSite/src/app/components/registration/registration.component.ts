@@ -15,18 +15,21 @@ export class RegistrationComponent implements OnInit {
   myForm: FormGroup;
   passWdForValid: string;
   myDatepicker: any;
+  pendingProcess: boolean;
 
   constructor(private userService: UserService, private router: Router) {
     this.user = {
       name: '',
       email: '',
       password: '',
-      birthDate:''
+      birthDate: ''
     };
+    this.pendingProcess = false;
   }
 
   onSubmit(): boolean {
     if (this.myForm.valid) {
+      this.pendingProcess = true;
       this.userService.addUser(this.myForm.value);
     } else {
       return false;

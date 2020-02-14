@@ -24,8 +24,9 @@ export class UserService {
     const json = JSON.stringify(usr);
     // írd át promiszra baszki
     const headers = new HttpHeaders().set('Content-Type', 'application/json; charset=utf-8');
-    this.http.post<UserResponse>(this.SERVER_URL + "rest/register" , json, {withCredentials: true, headers}).subscribe();
-    this.router.navigateByUrl('login/signUpSuccess');
+    this.http.post<UserResponse>(this.SERVER_URL + "rest/register" , json, {withCredentials: true, headers}).subscribe(
+      data => { this.router.navigateByUrl('login/signUpSuccess'); }
+    );
   }
 
   loginUser(usr: UserLogin) {
