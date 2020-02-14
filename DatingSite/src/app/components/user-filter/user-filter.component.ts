@@ -22,8 +22,8 @@ export class UserFilterComponent implements OnInit {
     this.form = new FormGroup(
       {
 
-        ownGender: new FormControl('Male'),
-        targetGender: new FormControl('Female'),
+        ownGender: new FormControl('Man'),
+        targetGender: new FormControl('Woman'),
         ageMin: new FormControl(18),
         ageMax: new FormControl(36)
       }
@@ -54,6 +54,10 @@ export class UserFilterComponent implements OnInit {
 
     };
     this.search.emit(f);
+    console.log(f.lookingFor);
+    console.log(f.maxAge);
+    console.log(f.minAge);
+    console.log(f.pageNumber);
   }
 
 }

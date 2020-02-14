@@ -10,7 +10,7 @@
               </div>
               <div class="col-lg-8 col-md-12">
                 <select class="selectpicker" [formControl]="ownGender">
-                  <option>Man</option>
+                  <option>{{Man}}</option>
                   <option>Woman</option>
                 </select>
               </div>
@@ -181,7 +181,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-2"><a class="button btn-lg btn-theme full-rounded animated right-icn"><span>search <i
+          <div class="col-md-2"><a class="button btn-lg btn-theme full-rounded animated right-icn" (click)="onSearchClick()"><span>search <i
                   class="glyph-icon flaticon-hearts" aria-hidden="true"></i></span></a></div>
         </div>
       </div>

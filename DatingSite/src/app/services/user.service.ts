@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import {User, UserLogin, Filter} from '../interfaces/user';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {UserResponse} from '../interfaces/user-response';
-import {BehaviorSubject, Observable} from 'rxjs';
+import { User, UserLogin, Filter } from '../interfaces/user';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { UserResponse } from '../interfaces/user-response';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { share, map } from 'rxjs/operators';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -31,12 +31,13 @@ export class UserService {
 
   //Lekérjük a users tömböt
   getUsers(filter?: Filter): BehaviorSubject<User[]> {
-    this.http.get<UserResponse>(
+    this.http.post<UserResponse>(
       this.SERVER_URL + "rest/profiles",
       //szűrés hogyan??? default? maximalizálni a kapott válaszokat?
       //kor -tól -ig, kit keres?, hányadiktól hányadik találatig
       //minAge, maxAge, lookingFor, startingNumber, endingNumber
-       { withCredentials: true })
+      { filter: filter },
+      { withCredentials: true })
       .subscribe(resp => this.updateUsers(resp));
     return this.users;
   }
@@ -53,7 +54,7 @@ export class UserService {
     return this.http.get<UserResponse>(
       this.SERVER_URL + 'rest/?id=' + id,
       { withCredentials: true }
-    ).pipe( map( response => response.users[0] ) );
+    ).pipe(map(response => response.users[0]));
   }
 
   public getMyProfile(): Observable<User> {

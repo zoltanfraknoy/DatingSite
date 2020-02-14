@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import {Messages} from 'src/app/interfaces/user';
 import { MessagesService } from 'src/app/services/messages.service';
 import { Subscription } from 'rxjs';
+import{Messages} from 'src/app/interfaces/user';
 
 @Component({
   selector: 'app-messages-list-componenet',
@@ -10,12 +10,10 @@ import { Subscription } from 'rxjs';
 })
 
 export class MessagesListComponenetComponent implements OnInit, OnDestroy {
-
-  messages: Messages [];
+  messages: Messages[];
   messagesSubscription: Subscription;
-
-  constructor(private messageService: MessagesService) { 
-    this.messages =[];
+  constructor(private messageService: MessagesService) {
+    this.messages = [];
   }
 
   ngOnInit() {
@@ -28,5 +26,4 @@ export class MessagesListComponenetComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.messagesSubscription.unsubscribe();
   }
-
 }

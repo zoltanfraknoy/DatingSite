@@ -33,7 +33,7 @@ export interface UserLogin {
   password: string;
 }
 
-export interface Messages{
+export interface Messages {
   id: number;
   author: string;
   partner: string;
@@ -47,4 +47,9 @@ export interface Filter {
   maxAge?: number,
   lookingFor?: string,
   pageNumber?: number
+}
+
+export enum Gender {
+  MALE = "Man",
+  FEMALE = "Woman"
 }
