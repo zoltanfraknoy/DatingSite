@@ -5,7 +5,8 @@
             <div class="col-md-12">
                 <div class="profile-cntn text-white">
                     <ul>
-                        <li><img src="../../../assets/images/profile/01.jpg" alt="" width="150" height="150" /></li>
+                        <!-- ../../../assets/images/profile/01.jpg -->
+                        <li><img src="{{user.imgUrl}}" alt="" width="150" height="150" /></li>
                         <li>
                             <div class="profile-text">
                                 <h2>{{user.name}}</h2>
@@ -112,27 +113,35 @@
                         <tbody>
                             <tr>
                                 <td>Movies</td>
-                                <td><input type="checkbox"  disabled></td>
+                                <td *ngIf="user.likesMovies"><input type="checkbox" :checked disabled></td>
+                                <td *ngIf="!user.likesMovies"><input type="checkbox"  disabled></td>
                                 <td>Sports</td>
-                                <td><input type="checkbox"  disabled></td>
+                                <td *ngIf="user.likesSports"><input type="checkbox" :checked disabled></td>
+                                <td *ngIf="!user.likesSports"><input type="checkbox"  disabled></td>
                             </tr>
                             <tr class="tr-bg">
                                 <td>Music</td>
-                                <td><input type="checkbox" disabled></td>
+                                <td *ngIf="user.likeMusic"><input type="checkbox" :checked disabled></td>
+                                <td *ngIf="!user.likesMusics"><input type="checkbox"  disabled></td>
                                 <td>Books</td>
-                                <td><input type="checkbox"  disabled></td>
+                                <td *ngIf="user.likesBooks"><input type="checkbox" :checked disabled></td>
+                                <td *ngIf="!user.likesBooks"><input type="checkbox"  disabled></td>
                             </tr>
                             <tr>
                                 <td>Culture</td>
-                                <td><input type="checkbox"  disabled></td>
+                                <td *ngIf="user.likesCulture"><input type="checkbox" :checked disabled></td>
+                                <td *ngIf="!user.likesCulture"><input type="checkbox"  disabled></td>
                                 <td>Travel</td>
-                                <td><input type="checkbox"  disabled></td>
+                                <td *ngIf="user.likesTravel"><input type="checkbox" :checked disabled></td>
+                                <td *ngIf="!user.likesTravel"><input type="checkbox"  disabled></td>
                             </tr>
                             <tr class="tr-bg">
                                 <td>Technology</td>
-                                <td><input type="checkbox"  disabled></td>
+                                <td *ngIf="user.likesTechnology"><input type="checkbox" :checked disabled></td>
+                                <td *ngIf="!user.likesTechnology"><input type="checkbox"  disabled></td>
                                 <td>Politics</td>
-                                <td><input type="checkbox" :checked disabled></td>
+                                <td *ngIf="user.likesPolitics"><input type="checkbox" :checked disabled></td>
+                                <td *ngIf="!user.likesPolitics"><input type="checkbox"  disabled></td>
                             </tr>
 
 

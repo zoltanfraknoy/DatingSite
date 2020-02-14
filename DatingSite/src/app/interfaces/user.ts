@@ -25,6 +25,7 @@ export interface User {
   likesPolitics?: boolean;
   minAge?: number;
   maxAge?: number;
+  imgUrl?: string;
 
 }
 
