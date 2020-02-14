@@ -33,7 +33,7 @@ export interface UserLogin {
   password: string;
 }
 
-export interface Message {
+export interface Messages{
   id: number;
   author: string;
   partner: string;

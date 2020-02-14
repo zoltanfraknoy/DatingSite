@@ -1,5 +1,5 @@
 <app-header-component></app-header-component>
-<section class="message">
+<section class="messages">
     <input [(ngModel)]="searchText" placeholder="Search...">
     <table class="table">
         <thead>
@@ -9,11 +9,11 @@
             </tr>
         </thead>
         <tbody>
-            <tr app-messages-component *ngFor="let m of message | filter: searchText" [message]="m"></tr>
-            <tr *ngIf="message.length==0">
-                <td colspan="2" style="text-align: center;">You haven't message yet.</td>
+            <tr app-messages-component *ngFor="let m of messages | filter: searchText" [messages]="m"></tr>
+            <tr *ngIf="messages.length==0">
+                <td colspan="2" style="text-align: center;">You haven't got message yet.</td>
             </tr>
-        </tbody>  
+        </tbody>
     </table>
 </section>
 <app-footer-component></app-footer-component>

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { Message } from '../interfaces/user';
+import { Messages } from '../interfaces/user';
 import { HttpClient } from '@angular/common/http';
 import { UserResponse } from '../interfaces/user-response';
 import { map } from 'rxjs/operators';
@@ -12,14 +12,14 @@ import { map } from 'rxjs/operators';
 
 export class MessagesService {
 
-  private messages: BehaviorSubject<Message[]>;
+  private messages: BehaviorSubject<Messages[]>;
   private readonly SERVER_URL = 'https://intense-meadow-41798.herokuapp.com/conversation';
 
   constructor(private http: HttpClient) { 
     this.messages = new BehaviorSubject([]);
   }
 
-  getMessages(): BehaviorSubject<Message[]> {
+  getMessages(): BehaviorSubject<Messages[]> {
     this.http.get<UserResponse>(this.SERVER_URL, {withCredentials: true})
       .subscribe(resp => this.updateMessages(resp));
     return this.messages;
@@ -31,7 +31,7 @@ export class MessagesService {
     }
   }
 
-  public getMessage(id: number): Observable<Message> {
+  public getMessage(id: number): Observable<Messages> {
     return this.http.get<UserResponse>(
       this.SERVER_URL + '?id=' + id,
       { withCredentials: true }
