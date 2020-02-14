@@ -4,6 +4,7 @@ import {map} from 'rxjs/operators';
 import {Router} from '@angular/router';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {User, UserLogin} from '../interfaces/user';
+import {UserService} from './user.service';
 
 @Injectable({
   providedIn: 'root'
@@ -12,11 +13,12 @@ export class AuthenticationService {
   isLoggedIn = false;
   private readonly SERVER_URL = 'https://intense-meadow-41798.herokuapp.com/';
 
-  currentUser$: BehaviorSubject<User>;
+  currentUser$: Observable<User>;
+  currentUserObj: User;
   currentUserId: number;
 
-  constructor(private http: HttpClient, private router: Router) {
-    this.currentUser$ = new BehaviorSubject<User>(null);
+  constructor(private http: HttpClient, private router: Router, private userService: UserService) {
+    this.currentUser$ = new Observable<User>(null);
     this.getCurrentUser();
   }
 
@@ -33,6 +35,7 @@ export class AuthenticationService {
     }) );
   }
   private getCurrentUser(): void {
+    /*
     this.http.get<any>(this.SERVER_URL + 'get', {withCredentials: true}).subscribe( res => {
       // if login has successfull, you receive ID in res body.
       this.currentUserId = res;
@@ -41,6 +44,11 @@ export class AuthenticationService {
       // if not:
       console.log('user not logged in');
     }
+    );
+
+     */
+    this.userService.getMyProfile().subscribe( data => { this.currentUserId = data.id; this.currentUserObj = data; },
+                                              error => { this.router.navigateByUrl('/login'); }
     );
   }
 

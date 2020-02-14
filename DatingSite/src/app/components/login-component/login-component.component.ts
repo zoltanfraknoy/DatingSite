@@ -34,11 +34,12 @@ export class LoginComponentComponent implements OnInit {
   onSubmit(): boolean {
     if (this.myForm.valid) {
       this.pendingProcess = true;
+      this.showErrorMessage = false;
       this.errorMessage = '';
       this.userService.login(this.myForm.value).subscribe(
         () => { this.router.navigate(['profiles', 'myProfile']); },
           () => { this.errorMessage = 'Invalid e-mail, or password!'; this.showErrorMessage = true; this.pendingProcess = false;});
-
+      setTimeout( () => { this.showErrorMessage = false; }, 4000 );
     } else {
       return false;
     }
@@ -46,11 +47,13 @@ export class LoginComponentComponent implements OnInit {
 
   isLogged(): string {
     if (this.userService.isLogged()) {
-      return 'true';
+      console.log(this.userService.currentUserObj.id);
+      return this.userService.currentUserObj.name;
     } else {
       return 'false';
     }
-    }
+  }
+
   ngOnInit() {
     this.myForm = new FormGroup({
       email: new FormControl(this.userlogin.email, [ Validators.required, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')]),

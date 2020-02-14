@@ -29,30 +29,7 @@ export class UserService {
     );
   }
 
-  loginUser(usr: UserLogin) {
-    // TODO
-    // login
-    const loginData = new FormData();
-    loginData.append('email', usr.email);
-    loginData.append('password', usr.password);
-    this.http.post<any>(this.SERVER_URL + 'login', loginData, {withCredentials: true}).subscribe(
-      data => {
-        //resault here example:
-        // data.resault
-        // save data to localStorge key / text or/maybe whatever
-        // you can check it everywhere like this:  localStorage.getItem('currentUser');
-        localStorage.setItem('currentUser', 'test');
-        console.log(data.response);
-        // jump to:
-        this.router.navigateByUrl('/myProfile');
-        }, //
-      error => {
-        //error message
-        this.router.navigateByUrl('/login/authError');
-      }
-    );
-  }
-//Lekérjük a users tömböt
+  //Lekérjük a users tömböt
   getUsers(filter?: Filter): BehaviorSubject<User[]> {
     this.http.get<UserResponse>(
       this.SERVER_URL + "rest/profiles",
