@@ -12,8 +12,12 @@ export class FirststepsComponent implements OnInit {
 
   myForm: FormGroup;
   firstStep: FirstStep;
+  showErrorMessage: boolean;
+  errorMessage: string;
 
   constructor(private userService: AuthenticationService) {
+    this.showErrorMessage = false;
+    this.errorMessage = '';
     this.firstStep = {
       picture: '',
       gender: '',
@@ -25,19 +29,21 @@ export class FirststepsComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.myForm);
+    if (this.myForm.valid) {
+      console.log('OK');
+    } else {
+      this.showErrorMessage = true;
+      this.errorMessage = 'We don\'t know your gender. Please pick your gender for continue.';
+    }
   }
 
   ngOnInit() {
-
     this.myForm = new FormGroup({
-      myGender: new FormControl(this.firstStep.gender),
+      myGender: new FormControl(this.firstStep.gender, Validators.required),
       aboutMe: new FormControl(this.firstStep.aboutMe),
       interestedGender: new FormControl(this.firstStep.interestedGender),
       preferenceFrom: new FormControl(this.firstStep.interestedAgeFrom),
       preferenceUntil: new FormControl(this.firstStep.interestedAgeUntil)
     });
-
-
   }
 }

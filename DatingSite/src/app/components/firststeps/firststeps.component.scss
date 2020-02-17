@@ -12,7 +12,20 @@ select{
   border-bottom: 1px solid #c7b7cf;
   height: 50px;
   padding-left: 20px;
-  color: #ffffff;
+  color: white;
+}
+
+.authErrorBubble {
+  background: #db5442;
+  border-radius: 3px;
+  color: #fff;
+  display: block;
+  font-size: 10px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: #d75a53;
+  background: -webkit-gradient(linear, right top, left top, from(#d75a53), to(#ff2d55));
+  background: linear-gradient(-90deg, #d75a53, #ff2d55);
 }
 
 button{

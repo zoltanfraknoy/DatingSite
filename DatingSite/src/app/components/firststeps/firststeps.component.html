@@ -29,6 +29,11 @@
                   <div class="col-md-8 text-left text-capitalize text-white">
                     <div class="form-group mb-0">
                       <label class="title divider-3 mb-3">gender</label>
+                      <div *ngIf="showErrorMessage" class="section-field text-uppercase text-center mt-2">
+                        <ul class="list-inline text-center">
+                          <li><a class="authErrorBubble">{{ errorMessage }}</a></li>
+                        </ul>
+                      </div>
                       <div class="row sm-mt-2">
                         <div class="col-md-4">
                           <div class="radio">

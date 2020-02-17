@@ -14,10 +14,14 @@ export class ProfileComponentComponent implements OnInit {
 
   @Input()
   user: User;
+  isUsable: boolean;
+  pageReady: boolean;
 
 
-
-  constructor(private userService: UserService, private modalService: NgbModal, private route: ActivatedRoute, private router: Router) { }
+  constructor(private userService: UserService, private modalService: NgbModal, private route: ActivatedRoute, private router: Router) {
+    this.isUsable = true;
+    this.pageReady = false;
+  }
 
   ngOnInit() {
     this.route.data.subscribe(data => {
@@ -25,7 +29,8 @@ export class ProfileComponentComponent implements OnInit {
         case 'ownProfile': {
           this.userService.getMyProfile().subscribe(u => {
             this.user = u;
-            console.log(u);
+            this.pageReady = true;
+            if (u.gender == null) { this.isUsable = false; }
           });
           break;
         }
