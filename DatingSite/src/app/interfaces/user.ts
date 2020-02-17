@@ -34,6 +34,15 @@ export interface UserLogin {
   password: string;
 }
 
+export interface FirstStep {
+  picture: string; //???????
+  gender: string;
+  interestedGender: string;
+  aboutMe: string;
+  interestedAgeFrom: string;
+  interestedAgeUntil: string;
+}
+
 export interface Messages {
   id: number;
   author: string;
