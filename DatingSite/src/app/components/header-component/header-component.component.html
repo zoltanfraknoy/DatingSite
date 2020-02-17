@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-md-12">
         <!-- menu start -->
-      
+
         <nav id="menu" class="mega-menu">
           <!-- menu list items container -->
           <section class="menu-list-items">
@@ -17,9 +17,10 @@
               <!-- active class -->
               <li class="active"><a routerLink="/main"> Home</a>
               </li>
-              <li><a routerLink="/messages"> Messages</a>
+              <li *ngIf="isLogged()"><a routerLink="/messages"> Messages</a>
               </li>
-              <li class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
+
+              <li #myDrop="ngbDropdown" *ngIf="isLogged()" class="d-inline-block" ngbDropdown>
 
                 <a href="#" ngbDropdownAnchor (focus)="myDrop.open()" (click)="$event.preventDefault()">Profiles
 
@@ -32,6 +33,11 @@
                 </a>
 
               </li>
+
+              <li *ngIf="!isLogged()"><a routerLink="/profiles" routerLinkActive="active"> Profiles </a>
+              </li>
+
+
               <li><a routerLink="/contact" routerLinkActive="active"> Contact </a>
               </li>
 
