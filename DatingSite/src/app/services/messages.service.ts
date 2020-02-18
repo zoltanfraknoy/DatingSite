@@ -26,7 +26,7 @@ export class MessagesService {
 
   private updateConversation(response: ConversationResponse) {
     if (response.success) {
-      this.conversation.next(response.conversation);
+      this.conversation.subscribe(response.conversation);
     }
   }
 
