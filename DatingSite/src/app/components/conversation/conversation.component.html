@@ -9,8 +9,8 @@
             </tr>
         </thead>
         <tbody>
-            <tr app-messages-component *ngFor="let m of messages | filter: searchText" [message]="m"></tr>
-            <tr *ngIf="messages.length==0">
+            <tr app-messages-component *ngFor="let c of conversation | filter: searchText" [message]="c"></tr>
+            <tr *ngIf="conversation.length==0">
                 <td colspan="2" style="text-align: center;">You haven't got message yet.</td>
             </tr>
         </tbody>
