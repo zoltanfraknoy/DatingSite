@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {Message} from 'src/app/interfaces/user';
+import {Message} from 'src/app/interfaces/message';
 import { MessagesService } from 'src/app/services/messages.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
