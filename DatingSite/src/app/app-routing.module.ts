@@ -7,8 +7,8 @@ import { ProfileComponentComponent } from './components/profile-component/profil
 import { RegistrationComponent } from './components/registration/registration.component';
 import { ProfilesComponent } from './components/profiles/profiles.component';
 import { ContactComponentComponent } from './components/contact-component/contact-component.component';
-import { MessagesComponentComponent } from './components/messages-component/messages-component.component';
 import { ModifyUserModalComponent } from './components/modify-user-modal/modify-user-modal.component';
+import { ConversationComponent } from './components/conversation/conversation.component';
 
 
 const routes: Routes = [
@@ -21,7 +21,7 @@ const routes: Routes = [
   //for test!!!!
   { path: 'test', component: TesterComponentComponent },
   { path: 'contact', component: ContactComponentComponent },
-  { path: 'messages', component: MessagesComponentComponent },
+  { path: 'messages', component: ConversationComponent },
   {path: 'profiles',component: ProfilesComponent,},
   { path: 'profiles/myProfile', component: ProfileComponentComponent, data: { kind: 'ownProfile' } },
   { path: 'profiles/:id', component: ProfileComponentComponent, data: { kind: 'othersProfile' } },

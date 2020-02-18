@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Conversation } from '../interfaces/conversation';
 import { HttpClient } from '@angular/common/http';
 import { UserResponse } from '../interfaces/user-response';
 import { map } from 'rxjs/operators';
-import { ConversationResponse } from '../interfaces/conversation-response';
+import { Conversation } from '../interfaces/conversation';
+
 
 
 @Injectable({
@@ -13,21 +13,13 @@ import { ConversationResponse } from '../interfaces/conversation-response';
 
 export class MessagesService {
 
-  private conversation: Observable<Conversation[]>;
   private readonly SERVER_URL = 'https://intense-meadow-41798.herokuapp.com/conversation';
 
   constructor(private http: HttpClient) {
-    this.conversation = new Observable;
   }
 
   getConversations(): Observable<Conversation[]> {
     return this.http.get<Conversation[]>(this.SERVER_URL, { withCredentials: true });
-  }
-
-  private updateConversation(response: ConversationResponse) {
-    if (response.success) {
-      this.conversation.subscribe(response.conversation);
-    }
   }
 
   public getConversation(id: number): Observable<Conversation> {

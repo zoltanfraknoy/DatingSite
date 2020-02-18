@@ -1,7 +1,9 @@
-import { Message } from './message';
+import { ConversationMessages } from './conversation-messages';
 
 export interface Conversation {
-    
-       messages: Message[];
-        
+
+    id: number;
+    conversationMessages: ConversationMessages[];
+    convStarter: string;
+    convPartner: string;
 }
