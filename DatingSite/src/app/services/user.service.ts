@@ -59,7 +59,7 @@ export class UserService {
 
   public getMyProfile(): Observable<User> {
     return this.http.get<User>(
-      this.SERVER_URL + 'rest/myProfile',
+      this.SERVER_URL + 'rest/getUser',
       { withCredentials: true }
     );
   }
