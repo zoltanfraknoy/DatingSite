@@ -1,6 +1,6 @@
 <app-header-component></app-header-component>
 <section class="messages">
-   <!-- <input [(ngModel)]="searchText" placeholder="Search..."> -->
+  <!-- <input [(ngModel)]="searchText" placeholder="Search...">  -->
     <table class="table">
         <thead>
             <tr>
@@ -10,8 +10,9 @@
         </thead>
         <tbody>
             <tr *ngFor="let c of conversations">
-                <td>{{ c.messages[0]?.partner }}</td>
-                <td><a routerLink="/conversation/{{c.id}}"> </a></td>
+                <td>{{ c.conversationMessages[0]?.partner }}</td>
+                <td>{{ c.conversationMessages[0]?.text }}</td>
+                <!-- <td><a routerLink="/conversation/{{c.id}}"> </a></td> -->
             </tr>
             <!-- <tr *ngIf="conversation.length==0">
                 <td colspan="2" style="text-align: center;">You haven't got message yet.</td>
