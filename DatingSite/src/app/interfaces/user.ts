@@ -34,6 +34,7 @@ export interface UserLogin {
   password: string;
 }
 
+<<<<<<< Updated upstream
 export interface FirstStep {
   picture: string; //???????
   gender: string;
@@ -51,6 +52,8 @@ export interface Messages {
   creationDate: Date;
   /*conversation: Conversation;*/
 }
+=======
+>>>>>>> Stashed changes
 
 export interface Filter {
   minAge?: number,

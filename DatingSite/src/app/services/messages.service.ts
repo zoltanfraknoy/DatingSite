@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { Messages } from '../interfaces/user';
+import { Observable } from 'rxjs';
+import { Conversation } from '../interfaces/conversation';
 import { HttpClient } from '@angular/common/http';
 import { UserResponse } from '../interfaces/user-response';
 import { map } from 'rxjs/operators';
+import { ConversationResponse } from '../interfaces/conversation-response';
 
 
 @Injectable({
@@ -12,30 +13,28 @@ import { map } from 'rxjs/operators';
 
 export class MessagesService {
 
-  private messages: BehaviorSubject<Messages[]>;
+  private conversation: Observable<Conversation[]>;
   private readonly SERVER_URL = 'https://intense-meadow-41798.herokuapp.com/conversation';
 
-  constructor(private http: HttpClient) { 
-    this.messages = new BehaviorSubject([]);
+  constructor(private http: HttpClient) {
+    this.conversation = new Observable;
   }
 
-  getMessages(): BehaviorSubject<Messages[]> {
-    this.http.get<UserResponse>(this.SERVER_URL, {withCredentials: true})
-      .subscribe(resp => this.updateMessages(resp));
-    return this.messages;
+  getConversations(): Observable<Conversation[]> {
+    return this.http.get<Conversation[]>(this.SERVER_URL, { withCredentials: true });
   }
 
-  private updateMessages(response: UserResponse) {
+  private updateConversation(response: ConversationResponse) {
     if (response.success) {
-      this.messages.next(response.messages);
+      this.conversation.next(response.conversation);
     }
   }
 
-  public getMessage(id: number): Observable<Messages> {
+  public getConversation(id: number): Observable<Conversation> {
     return this.http.get<UserResponse>(
       this.SERVER_URL + '?id=' + id,
       { withCredentials: true }
-    ).pipe( map( response => response.messages[0] ) );
+    ).pipe(map(response => response.conversation[0]));
   }
 
 

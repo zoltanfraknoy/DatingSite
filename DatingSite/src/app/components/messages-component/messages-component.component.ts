@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {Messages} from 'src/app/interfaces/user';
+import {Message} from 'src/app/interfaces/user';
 import { MessagesService } from 'src/app/services/messages.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
@@ -11,7 +11,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 export class MessagesComponentComponent implements OnInit {
 
 @Input()
-messages: Messages;
+message: Message;
 
   constructor(private messagesService: MessagesService, private modalService: NgbModal) { }
   

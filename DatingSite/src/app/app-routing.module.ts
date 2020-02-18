@@ -22,10 +22,7 @@ const routes: Routes = [
   { path: 'test', component: TesterComponentComponent },
   { path: 'contact', component: ContactComponentComponent },
   { path: 'messages', component: MessagesComponentComponent },
-  {
-    path: 'profiles',
-    component: ProfilesComponent,
-  },
+  {path: 'profiles',component: ProfilesComponent,},
   { path: 'profiles/myProfile', component: ProfileComponentComponent, data: { kind: 'ownProfile' } },
   { path: 'profiles/:id', component: ProfileComponentComponent, data: { kind: 'othersProfile' } },
   { path: 'modify', component: ModifyUserModalComponent }

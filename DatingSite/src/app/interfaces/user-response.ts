@@ -1,10 +1,10 @@
-import {User, Messages} from './user';
+import {User} from './user';
+import { Conversation } from './conversation';
 
 export interface UserResponse {
   success: boolean;
   users: User[];
-  messages: Messages[];
-  
+  conversation: Conversation[];
   
 }
 
