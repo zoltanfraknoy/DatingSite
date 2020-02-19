@@ -47,8 +47,8 @@ export interface FirstStep {
 export interface Filter {
   minAge?: number,
   maxAge?: number,
-  lookingFor?: Gender,
-  pageNumber?: number
+  interest?: Gender,
+  numberPage?: number
 }
 
 export enum Gender {

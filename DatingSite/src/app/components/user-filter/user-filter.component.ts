@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { User, Filter } from 'src/app/interfaces/user';
+import { User, Filter, Gender } from 'src/app/interfaces/user';
 import { UserService } from 'src/app/services/user.service';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 
@@ -13,6 +13,8 @@ export class UserFilterComponent implements OnInit {
   @Input()
   user: User;
   form: FormGroup;
+  numberPage: number;
+  agePicker: number[];
 
   @Output()
   search: EventEmitter<Filter>;
@@ -25,40 +27,46 @@ export class UserFilterComponent implements OnInit {
         targetGender: new FormControl('Woman'),
         ageMin: new FormControl(18),
         ageMax: new FormControl(36),
-        pageNumber: new FormControl(1)
       }
     );
     this.search = new EventEmitter();
 
+    this.agePicker = [];
+
+    for (let i = 18; i <= 80; i++) {
+      this.agePicker.push(i);
+    }
+
   }
 
   ngOnInit() {
+
     this.userService.getMyProfile().subscribe(u => {
       this.user = u;
       this.form.controls['ageMin'].setValue(this.user.minAge);
       this.form.controls['ageMax'].setValue(this.user.maxAge);
       this.form.controls['ownGender'].setValue(this.user.gender);
       this.form.controls['targetGender'].setValue(this.user.interest);
-      this.form.controls['pageNumber'].setValue(1);
-    });
-    this.createForm();
-  }
-
-  private createForm() {
-    this.form = this.fb.group({
 
     });
+
   }
 
   onSearchClick(): void {
     const f: Filter = {
+      minAge: this.form.controls['ageMin'].value,
+      maxAge: this.form.controls['ageMax'].value,
+      interest: this.form.controls['targetGender'].value,
+      numberPage: 1
 
     };
     this.search.emit(f);
-    console.log(f.lookingFor);
+
+
+    console.log(f.interest);
     console.log(f.maxAge);
     console.log(f.minAge);
-    console.log(f.pageNumber);
+    console.log(f.numberPage);
   }
 
 }
