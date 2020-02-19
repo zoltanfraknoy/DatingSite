@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {AuthenticationService} from '../../services/authentication.service';
-import {FirstStep} from '../../interfaces/user';
+import {User} from '../../interfaces/user';
+import {UserService} from '../../services/user.service';
+import {Router} from '@angular/router';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-firststeps',
@@ -11,26 +14,39 @@ import {FirstStep} from '../../interfaces/user';
 export class FirststepsComponent implements OnInit {
 
   myForm: FormGroup;
-  firstStep: FirstStep;
+  firstModify: User;
   showErrorMessage: boolean;
   errorMessage: string;
+  img: File;
+  currentUser: User;
 
-  constructor(private userService: AuthenticationService) {
+  constructor(private authService: AuthenticationService, private userService: UserService, private router: Router) {
     this.showErrorMessage = false;
     this.errorMessage = '';
-    this.firstStep = {
-      picture: '',
+    this.firstModify = {
+      birthDate: '', email: '', name: '', password: '',
+      imgUrl: '',
       gender: '',
       aboutMe: '',
-      interestedGender: '',
-      interestedAgeFrom: '',
-      interestedAgeUntil: '',
+      interest: '',
+      minAge: 18,
+      maxAge: 80
     };
+  }
+
+  onFileChanged(event) {
+    this.img = event.target.files[0];
+    //console.log('siker?');
+    this.userService.uploadImg(this.img).subscribe();
+    this.userService.getMyProfile().subscribe( data => { this.currentUser = data; console.log(this.currentUser);});
   }
 
   onSubmit() {
     if (this.myForm.valid) {
-      console.log('OK');
+      this.userService.modifyUser(this.myForm.value).subscribe(
+        success => { console.log('sikeres'); this.router.navigateByUrl('profiles'); },
+        error => { console.log('nem'); }
+      );
     } else {
       this.showErrorMessage = true;
       this.errorMessage = 'We don\'t know your gender. Please pick your gender for continue.';
@@ -39,11 +55,11 @@ export class FirststepsComponent implements OnInit {
 
   ngOnInit() {
     this.myForm = new FormGroup({
-      myGender: new FormControl(this.firstStep.gender, Validators.required),
-      aboutMe: new FormControl(this.firstStep.aboutMe),
-      interestedGender: new FormControl(this.firstStep.interestedGender),
-      preferenceFrom: new FormControl(this.firstStep.interestedAgeFrom),
-      preferenceUntil: new FormControl(this.firstStep.interestedAgeUntil)
+      gender: new FormControl(this.firstModify.gender, Validators.required),
+      aboutMe: new FormControl(this.firstModify.aboutMe),
+      interest: new FormControl(this.firstModify.interest),
+      minAge: new FormControl(this.firstModify.minAge),
+      maxAge: new FormControl(this.firstModify.maxAge)
     });
   }
 }

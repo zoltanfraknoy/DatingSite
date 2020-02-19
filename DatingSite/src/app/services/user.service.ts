@@ -63,4 +63,24 @@ export class UserService {
       { withCredentials: true }
     );
   }
+
+  public modifyUser(usr: User): Observable<boolean> {
+    const headers = new HttpHeaders().set('Content-Type', 'application/json; charset=utf-8');
+    const json = JSON.stringify(usr);
+    return this.http.post(
+      this.SERVER_URL + 'rest/updateUser', json,
+      { withCredentials: true, headers }
+    ).pipe(map((res: Response) => {
+      return res.status <= 200 && res.status < 300;
+    }));
+  }
+
+  public uploadImg(file: File): Observable<boolean> {
+    const uploadData = new FormData();
+    uploadData.append('file', file, file.name);
+    return this.http.post(this.SERVER_URL + 'rest/updatepicture', uploadData, { withCredentials: true }
+    ).pipe(map((res: Response) => {
+      return res.status <= 200 && res.status < 300;
+    }));
+  }
 }

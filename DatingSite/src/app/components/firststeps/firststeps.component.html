@@ -3,7 +3,7 @@
     <div class="row  justify-content-center">
       <div class="col-md-8">
         <div class="step-form">
-          <form (submit)="onSubmit()" [formGroup]="myForm" class="text-center mt-3">
+          <form class="text-center mt-3">
             <div class="row  justify-content-center setup-content" id="step-1" style="display: flex;">
               <div class="col-md-10">
                 <h4 class="title divider-3 mb-5">Photo</h4>
@@ -13,16 +13,24 @@
                       <div class="row">
                         <div class="col-md-12 pr-15"> <img class="img-center w-100" src="../../../assets/images/step/01.png" alt=""> </div>
                       </div>
+                      <input
+                        #fileInput
+                        (change)="onFileChanged($event)" style="display: none"
+                        type="file">
                     </div>
                     <div class="form-group">
                       <div class="step-social mt-3 mb-2 text-center clearfix">
-                          <li><a href=""><i aria-hidden="true" class="fa fa-file-image-o"></i> import</a></li>
+                          <li><a href="">
+                            <button (click)="fileInput.click()"><i aria-hidden="true" class="fa fa-file-image-o"></i> import</button>
+                          </a></li>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+          </form>
+          <form (submit)="onSubmit()" [formGroup]="myForm" class="text-center mt-3">
             <div class="row setup-content" id="step-2">
               <div class="col-md-12">
                 <div class="row  justify-content-center">
@@ -37,13 +45,13 @@
                       <div class="row sm-mt-2">
                         <div class="col-md-4">
                           <div class="radio">
-                            <input checked="checked" formControlName="myGender" id="myGenderIsWoman" name="myGender" type="radio" value="WOMAN">
+                            <input checked="checked" formControlName="gender" id="myGenderIsWoman" name="gender" type="radio" value="Woman">
                             <label for="myGenderIsWoman">female</label>
                           </div>
                         </div>
                         <div class="col-md-4 sm-mt-2">
                           <div class="radio">
-                            <input formControlName="myGender" id="myGenderIsMan" name="myGender" type="radio" value="MAN">
+                            <input formControlName="gender" id="myGenderIsMan" name="gender" type="radio" value="Man">
                             <label for="myGenderIsMan">male</label>
                           </div>
                         </div>
@@ -66,13 +74,13 @@
                       <div class="row sm-mt-2">
                         <div class="col-md-4">
                           <div class="radio">
-                            <input checked="checked" formControlName="interestedGender" id="interestedFemale" name="interestedGender" type="radio" value="WOMAN">
+                            <input checked="checked" formControlName="interest" id="interestedFemale" name="interest" type="radio" value="WOMAN">
                             <label for="interestedFemale">female</label>
                           </div>
                         </div>
                         <div class="col-md-4 sm-mt-2">
                           <div class="radio">
-                            <input formControlName="interestedGender" id="interestedMale" name="interestedGender" type="radio" value="MAN">
+                            <input formControlName="interest" id="interestedMale" name="interest" type="radio" value="MAN">
                             <label for="interestedMale">male</label>
                           </div>
                         </div>
@@ -83,7 +91,7 @@
                           <div class="col-md-6">
                             <div class="section-field mb-2">
                               <div class="field-widget">
-                                <select formControlName="preferenceFrom" id="preferenceFrom">
+                                <select formControlName="minAge" id="preferenceFrom">
                                   <option selected value="18">18</option>
                                   <option value="19">19</option>
                                   <option value="20">20</option>
@@ -96,8 +104,8 @@
                           </div>
                           <div class="col-md-6">
                             <div class="field-widget">
-                              <select formControlName="preferenceUntil" id="preferenceUntil">
-                                <option selected value="65">65</option>
+                              <select formControlName="maxAge" id="preferenceUntil">
+                                <option selected value="80">80</option>
                                 <option value="64">64</option>
                                 <option value="63">63</option>
                                 <option value="62">62</option>
