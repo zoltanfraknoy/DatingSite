@@ -21,8 +21,7 @@ export class UserFilterComponent implements OnInit {
 
     this.form = new FormGroup(
       {
-
-        ownGender: new FormControl('Man',),
+        ownGender: new FormControl('Man'),
         targetGender: new FormControl('Woman'),
         ageMin: new FormControl(18),
         ageMax: new FormControl(36),
@@ -37,7 +36,6 @@ export class UserFilterComponent implements OnInit {
     this.userService.getMyProfile().subscribe(u => {
       this.user = u;
       this.form.controls['ageMin'].setValue(this.user.minAge);
-      console.log(this.form.controls['ageMin']);
       this.form.controls['ageMax'].setValue(this.user.maxAge);
       this.form.controls['ownGender'].setValue(this.user.gender);
       this.form.controls['targetGender'].setValue(this.user.interest);

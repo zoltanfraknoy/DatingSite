@@ -16,7 +16,6 @@ import {InfoLineComponent} from './components/info-line/info-line.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfilesComponent } from './components/profiles/profiles.component';
-import { MessagesComponentComponent } from './components/messages-component/messages-component.component';
 import { FirststepsComponent } from './components/firststeps/firststeps.component';
 import { UserFilterComponent } from './components/user-filter/user-filter.component';
 import { ModifyUserModalComponent } from './components/modify-user-modal/modify-user-modal.component';
@@ -38,7 +37,6 @@ import { ConversationComponent } from './components/conversation/conversation.co
     ProfileComponentComponent,
     InfoLineComponent,
     ProfilesComponent,
-    MessagesComponentComponent,
     FirststepsComponent,
     UserFilterComponent,
     ModifyUserModalComponent,

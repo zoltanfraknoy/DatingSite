@@ -50,17 +50,18 @@
                                 <td>City</td>
                                 <td>{{user.city}}</td>
                                 <td>Horoscope</td>
-                                <td>{{user.horoscope}}</td>
+                                <td>{{user.horoscopeEnum}}</td>
                             </tr>
                             <tr class="tr-bg">
                                 <td>Birth Year</td>
                                 <td>{{user.birthYear}}</td>
                                 <td>Smoking</td>
-                                <td>{{user.isSmoking}}</td>
+                                <td *ngIf="user.isSmoking"><input type="checkbox" :checked disabled></td>
+                                <td *ngIf="!user.isSmoking"><input type="checkbox"  disabled></td>
                             </tr>
                             <tr>
                                 <td>Looking for a</td>
-                                <td>{{user.intrestedIn}}</td>
+                                <td>{{user.interest}}</td>
                                 <td>Body shape</td>
                                 <td>{{user.bodyShape}}</td>
                             </tr>
@@ -76,28 +77,7 @@
         <div class="row mt-5 sm-mt-3">
             <div class="col-md-12 text-left">
                 <h4 class="title divider-3 mb-5 sm-mb-3">About Me</h4>
-                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute
-                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur sint occaecat cupidatat
-                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis
-                    unde omnis iste natus error
-                    sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-                    inventore veritatis et quasi
-                    architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-                    aspernatur aut odit aut fugit,
-                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-                    est, qui dolorem
-                    ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
-                    incidunt ut labore et dolore
-                    magnam aliquam quaerat voluptatem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                    eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit. in voluptate velit esse
-                    cillum dolore eu fugiat nulla
+                <p class="mb-0">{{user.aboutMe}}
                 </p>
             </div>
         </div>
@@ -150,7 +130,7 @@
                 </div>
             </div>
         </div>
-        <a RouterLink="modify" class="button btn-lg full-rounded btn-colored animated right-icn col align-self-end" style="margin-top: 40px;"><span>Change your profile<i class="glyph-icon flaticon-hearts" aria-hidden="true"></i></span></a>
+        <a  *ngIf="router.url === 'profiles/myProfile'" RouterLink="modify" class="button btn-lg full-rounded btn-colored animated right-icn col align-self-end" style="margin-top: 40px;"><span>Change your profile<i class="glyph-icon flaticon-hearts" aria-hidden="true"></i></span></a>
     </div>
     
     

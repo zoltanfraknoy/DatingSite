@@ -10,7 +10,7 @@ export interface User {
   bodyShape?: string;
   eyeColor?: string;
   hairColor?: string;
-  horoscope?: string;
+  horoscopeEnum?: string;
   smoking?: boolean;
   interest?: string;
   birthYear?: number;
@@ -47,11 +47,11 @@ export interface FirstStep {
 export interface Filter {
   minAge?: number,
   maxAge?: number,
-  lookingFor?: string,
+  lookingFor?: Gender,
   pageNumber?: number
 }
 
 export enum Gender {
-  MALE = "Man",
-  FEMALE = "Woman"
+  MAN = 'Man',
+  WOMAN = 'Woman'
 }

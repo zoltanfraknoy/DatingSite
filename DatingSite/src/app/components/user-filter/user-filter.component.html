@@ -8,9 +8,9 @@
               <label class="control-label text-white">I am a</label>
             </div>
             <div class="col-lg-8 col-md-12">
-              <select class="selectpicker" [formControl]=ownGender>
-                <option>Man</option>
-                <option>Woman</option>
+              <select class="selectpicker" [formControl]="ownGender">
+                <option value="Man">Man</option>
+                <option value="Woman">Woman</option>
               </select>
             </div>
           </div>
@@ -22,8 +22,8 @@
             </div>
             <div class="col-lg-7 col-md-12">
               <select class="selectpicker" [formControl]="targetGender">
-                <option>Man</option>
-                <option>Woman</option>
+                <option value="Man">Man</option>
+                <option value="Woman">Woman</option>
               </select>
             </div>
           </div>
