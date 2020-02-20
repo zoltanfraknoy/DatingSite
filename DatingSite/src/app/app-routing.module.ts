@@ -18,12 +18,15 @@ const routes: Routes = [
   { path: 'login', component: LoginComponentComponent },
   { path: 'login/loggedOut', component: LoginComponentComponent, data: { showLoggedOutMessage: true } },
   { path: 'login/signUpSuccess', component: LoginComponentComponent, data: { showSignUpMessage: true } },
+  { path: 'login/pleaseSignIn', component: LoginComponentComponent, data: { showSignInMessage: true } },
   //for test!!!!
   { path: 'test', component: TesterComponentComponent },
+
   { path: 'contact', component: ContactComponentComponent },
   { path: 'messages', component: ConversationComponent },
-  {path: 'profiles',component: ProfilesComponent,},
+  { path: 'profiles', component: ProfilesComponent},
   { path: 'profiles/myProfile', component: ProfileComponentComponent, data: { kind: 'ownProfile' } },
+  { path: 'profiles/myProfile/successFirstSetup', component: ProfileComponentComponent, data: { showFirstSetupMessage: true, kind: 'ownProfile' } },
   { path: 'profiles/:id', component: ProfileComponentComponent, data: { kind: 'othersProfile' } },
   { path: 'modify', component: ModifyUserModalComponent }
 ];

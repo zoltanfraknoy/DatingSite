@@ -43,6 +43,10 @@ export class ProfileComponentComponent implements OnInit {
     const modalRef = this.modalService.open(ModifyUserModalComponent);
     modalRef.componentInstance.user = this.user;
   }
+
+  onActivate(event) {
+    window.scroll(0, 0);
+  }
 }
 
 

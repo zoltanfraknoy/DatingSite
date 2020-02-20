@@ -36,7 +36,7 @@ export class FirststepsComponent implements OnInit {
 
   onFileChanged(event) {
     this.img = event.target.files[0];
-    //console.log('siker?');
+
     this.userService.uploadImg(this.img).subscribe();
     this.userService.getMyProfile().subscribe( data => { this.currentUser = data; console.log(this.currentUser);});
   }
@@ -44,7 +44,10 @@ export class FirststepsComponent implements OnInit {
   onSubmit() {
     if (this.myForm.valid) {
       this.userService.modifyUser(this.myForm.value).subscribe(
-        success => { console.log('sikeres'); this.router.navigateByUrl('profiles'); },
+        success => {
+                        //success modify, redirect:
+                        this.router.navigate(['profiles', 'myProfile' , 'successFirstSetup']);
+                        },
         error => { console.log('nem'); }
       );
     } else {

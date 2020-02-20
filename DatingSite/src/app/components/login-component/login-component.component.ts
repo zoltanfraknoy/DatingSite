@@ -17,6 +17,7 @@ export class LoginComponentComponent implements OnInit {
   errorMessage: string;
   showLoggedOutMessage: boolean;
   showSignUpMessage: boolean;
+  showSignInMessage: boolean;
   showErrorMessage = false;
   pendingProcess = false;
 
@@ -29,6 +30,7 @@ export class LoginComponentComponent implements OnInit {
     this.pendingProcess = false;
     this.showLoggedOutMessage = this.route.snapshot.data && this.route.snapshot.data.showLoggedOutMessage;
     this.showSignUpMessage = this.route.snapshot.data && this.route.snapshot.data.showSignUpMessage;
+    this.showSignInMessage = this.route.snapshot.data && this.route.snapshot.data.showSignInMessage;
   }
 
   onSubmit(): boolean {
@@ -42,15 +44,6 @@ export class LoginComponentComponent implements OnInit {
       setTimeout( () => { this.showErrorMessage = false; }, 4000 );
     } else {
       return false;
-    }
-  }
-
-  isLogged(): string {
-    if (this.userService.isLogged()) {
-      console.log(this.userService.currentUserObj.id);
-      return this.userService.currentUserObj.name;
-    } else {
-      return 'false';
     }
   }
 

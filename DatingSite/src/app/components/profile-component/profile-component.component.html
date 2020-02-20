@@ -1,4 +1,5 @@
 <app-header-component></app-header-component>
+<router-outlet (activate)="onActivate($event)" ></router-outlet>
 <app-firststeps *ngIf="!isUsable"></app-firststeps>
 
 

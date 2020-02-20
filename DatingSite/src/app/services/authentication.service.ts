@@ -34,26 +34,16 @@ export class AuthenticationService {
       return res.status <= 200 && res.status < 300;
     }) );
   }
-  private getCurrentUser(): void {
-    /*
-    this.http.get<any>(this.SERVER_URL + 'get', {withCredentials: true}).subscribe( res => {
-      // if login has successfull, you receive ID in res body.
-      this.currentUserId = res;
-    },
-    error => {
-      // if not:
-      console.log('user not logged in');
-    }
-    );
-
-     */
-    this.userService.getMyProfile().subscribe( data => { this.currentUserId = data.id; this.currentUserObj = data; },
-                                              error => { this.router.navigateByUrl('/login'); }
-    );
+  public isLogged(): boolean {
+    return this.currentUserId !== undefined;
   }
 
-  public isLogged(): boolean {
-    return this.currentUserId === undefined ? false : true;
+  private getCurrentUser(): void {
+    this.userService.getMyProfile().subscribe( data => { this.currentUserId = data.id; this.currentUserObj = data; },
+                                              error => { // user not logged in, redirect
+                                                this.router.navigateByUrl('/login/pleaseSignIn');
+       }
+    );
   }
 
   public signOut() {
