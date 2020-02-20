@@ -41,7 +41,7 @@ export class AuthenticationService {
   private getCurrentUser(): void {
     this.userService.getMyProfile().subscribe( data => { this.currentUserId = data.id; this.currentUserObj = data; },
                                               error => { // user not logged in, redirect
-                                                this.router.navigateByUrl('/login/pleaseSignIn');
+
        }
     );
   }

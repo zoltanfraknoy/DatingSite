@@ -2,3 +2,22 @@
     background-image: url(../../../assets/images/home-page-picture.jpg);
     position: relative;
 }
+
+select{
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #c7b7cf;
+  height: 50px;
+  padding-left: 20px;
+  color: white;
+}
+
+.slider-static {
+  padding-top: 1%;
+  padding-bottom: 5%;
+}
+
+.radius {
+  border-radius: 10px;
+}
