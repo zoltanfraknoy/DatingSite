@@ -14,7 +14,7 @@
                 <div class="profile-cntn text-white">
                     <ul>
                         <!-- ../../../assets/images/profile/01.jpg -->
-                        <li><img src="{{user.imgUrl}}" alt="" width="150" height="150" /></li>
+                        <li><img src="https://intense-meadow-41798.herokuapp.com{{user.imgUrl}}" alt="" width="150" height="150" /></li>
                         <li>
                             <div class="profile-text">
                                 <h2>{{user.name}}</h2>
@@ -138,7 +138,7 @@
                 </div>
             </div>
         </div>
-        <a  *ngIf="router.url === 'profiles/myProfile'" RouterLink="modify" class="button btn-lg full-rounded btn-colored animated right-icn col align-self-end" style="margin-top: 40px;"><span>Change your profile<i class="glyph-icon flaticon-hearts" aria-hidden="true"></i></span></a>
+        <a  *ngIf="router.url == '/profiles/myProfile'" RouterLink="modify" class="button btn-lg full-rounded btn-colored animated right-icn col align-self-end" style="margin-top: 40px;"><span>Change your profile<i class="glyph-icon flaticon-hearts" aria-hidden="true"></i></span></a>
     </div>
 
 
