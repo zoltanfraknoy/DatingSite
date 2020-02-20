@@ -38,7 +38,7 @@
                 </div>
                 <div class="col-lg-8 col-md-12">
                   <select class="selectpicker" formControlName="ageMin">
-                    <option *ngFor="let age of agePicker" value="age">{{age}}</option>
+                    <option *ngFor="let age of agePicker" [value]="age">{{age}}</option>
                   </select>
                 </div>
               </div>
@@ -50,7 +50,7 @@
                 </div>
                 <div class="col-lg-8 col-md-12">
                   <select class="selectpicker" formControlName="ageMax">
-                    <option *ngFor="let age of agePicker" value="age">{{age}}</option>
+                    <option *ngFor="let age of agePicker" [value]="age">{{age}}</option>
                   </select>
                 </div>
               </div>

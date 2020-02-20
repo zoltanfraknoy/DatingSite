@@ -36,7 +36,7 @@ export class UserService {
       //szűrés hogyan??? default? maximalizálni a kapott válaszokat?
       //kor -tól -ig, kit keres?, hányadiktól hányadik találatig
       //minAge, maxAge, lookingFor, startingNumber, endingNumber
-      { filter: filter },
+      filter,
       { withCredentials: true })
       .subscribe(resp => this.updateUsers(resp));
     return this.users;

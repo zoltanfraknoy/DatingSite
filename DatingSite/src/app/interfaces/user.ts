@@ -47,7 +47,7 @@ export interface FirstStep {
 export interface Filter {
   minAge?: number,
   maxAge?: number,
-  interest?: Gender,
+  lookingFor?: Gender,
   numberPage?: number
 }
 

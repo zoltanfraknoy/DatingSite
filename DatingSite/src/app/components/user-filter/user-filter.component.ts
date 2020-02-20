@@ -56,14 +56,14 @@ export class UserFilterComponent implements OnInit {
     const f: Filter = {
       minAge: this.form.controls['ageMin'].value,
       maxAge: this.form.controls['ageMax'].value,
-      interest: this.form.controls['targetGender'].value,
+      lookingFor: this.form.controls['targetGender'].value,
       numberPage: 1
 
     };
     this.search.emit(f);
 
 
-    console.log(f.interest);
+    console.log(f.lookingFor);
     console.log(f.maxAge);
     console.log(f.minAge);
     console.log(f.numberPage);
