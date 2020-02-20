@@ -28,6 +28,19 @@ select{
   background: linear-gradient(-90deg, #d75a53, #ff2d55);
 }
 
+.successBubble {
+  background: #db5442;
+  border-radius: 3px;
+  color: #fff;
+  display: block;
+  font-size: 14px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: #0d6921;
+  background: -webkit-gradient(linear, right top, left top, from(#0d6921), to(#15ad36));
+  background: linear-gradient(-90deg, #0d6921, #15ad36);
+}
+
 button{
   background-color: Transparent;
   border: 0;

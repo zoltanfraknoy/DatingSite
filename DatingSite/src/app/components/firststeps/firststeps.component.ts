@@ -20,8 +20,13 @@ export class FirststepsComponent implements OnInit {
   img: File;
   currentUser: User;
 
+  pendingUpload: boolean;
+  uploadSuccess: boolean;
+
   constructor(private authService: AuthenticationService, private userService: UserService, private router: Router) {
     this.showErrorMessage = false;
+    this.pendingUpload = false;
+    this.uploadSuccess = false;
     this.errorMessage = '';
     this.firstModify = {
       birthDate: '', email: '', name: '', password: '',
@@ -36,9 +41,13 @@ export class FirststepsComponent implements OnInit {
 
   onFileChanged(event) {
     this.img = event.target.files[0];
-
+    this.pendingUpload = true;
     this.userService.uploadImg(this.img).subscribe();
-    this.userService.getMyProfile().subscribe( data => { this.currentUser = data; console.log(this.currentUser);});
+    this.userService.getMyProfile().subscribe( data => {
+      this.currentUser = data;
+      this.pendingUpload = false;
+      this.uploadSuccess = true;
+    });
   }
 
   onSubmit() {

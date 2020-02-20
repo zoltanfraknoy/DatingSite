@@ -18,13 +18,24 @@
                         (change)="onFileChanged($event)" style="display: none"
                         type="file">
                     </div>
-                    <div class="form-group">
-                      <div class="step-social mt-3 mb-2 text-center clearfix">
-                          <li><a href="">
-                            <button (click)="fileInput.click()"><i aria-hidden="true" class="fa fa-file-image-o"></i> import</button>
-                          </a></li>
-                      </div>
+
+                    <div *ngIf="!uploadSuccess" class="section-field text-uppercase text-center mt-2">
+                      <a class="button  btn-lg btn-theme full-rounded animated right-icn">
+                        <button (click)="fileInput.click()">
+                          <span *ngIf="!pendingUpload"><i aria-hidden="true" class="fa fa-file-image-o"></i> import</span>
+                          <div *ngIf="pendingUpload" class="spinner-border text-warning" role="status">
+                          </div>
+                        </button>
+                      </a>
                     </div>
+
+                    <div *ngIf="uploadSuccess" class="section-field text-uppercase text-center mt-2">
+                      <span style="font-size: 15px;">
+                        <a class="successBubble"> <i class="fa fa-check"></i> </a>
+                      </span>
+                    </div>
+
+
                   </div>
                 </div>
               </div>
@@ -116,7 +127,15 @@
                           </div>
                         </div>
                       </div>
-                      <div class="section-field text-uppercase text-center mt-2"><a class="button btn-theme full-rounded btn nextBtn btn-lg mt-2 animated right-icn"> <button type="submit">submit<i aria-hidden="true" class="glyph-icon flaticon-hearts"></i></button> </a></div>
+
+                      <div class="section-field text-uppercase text-center mt-2">
+                        <a class="button  btn-lg btn-theme full-rounded animated right-icn">
+                          <button type="submit">
+                            <span><i aria-hidden="true" class="fa fa-file-image-o"></i> save</span>
+                          </button>
+                        </a>
+                      </div>
+
                     </div>
                   </div>
                 </div>
