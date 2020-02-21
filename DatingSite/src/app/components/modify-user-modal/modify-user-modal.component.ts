@@ -19,10 +19,12 @@ export class ModifyUserModalComponent implements OnInit {
   pendingUpload: boolean;
   uploadSuccess: boolean;
 
+
   constructor(private modalService: NgbModal, private authService: AuthenticationService, private userService: UserService) {
     this.pendingUpload = false;
     this.uploadSuccess = false;
     this.currentUser = authService.currentUserObj;
+
   }
 
   onFileChanged(event) {
@@ -67,11 +69,31 @@ export class ModifyUserModalComponent implements OnInit {
     this.myForm = new FormGroup({
       interest: new FormControl(this.currentUser.interest),
       minAge: new FormControl(this.currentUser.minAge),
-      maxAge: new FormControl(this.currentUser.maxAge)
+      maxAge: new FormControl(this.currentUser.maxAge),
+      gender: new FormControl(this.currentUser.gender),
+      aboutMe: new FormControl(this.currentUser.aboutMe),
+      city: new FormControl(this.currentUser.city),
+      bodyShape: new FormControl(this.currentUser.bodyShape),
+      horoscope: new FormControl(this.currentUser.horoscopeEnum),
+      eyeColor: new FormControl(this.currentUser.eyeColor),
+      hairColor: new FormControl(this.currentUser.hairColor),
+      smoking: new FormControl(this.currentUser.smoking),
+      birthDate: new FormControl(this.currentUser.birthDate),
+      likesMovies: new FormControl(this.currentUser.likesMovies),
+      likesSports: new FormControl(this.currentUser.likesSports),
+      likesMusic: new FormControl(this.currentUser.likesMusic),
+      likesBooks: new FormControl(this.currentUser.likesBooks),
+      likesCulture: new FormControl(this.currentUser.likesCulture),
+      likesTravel: new FormControl(this.currentUser.likesTravel),
+      likesTechnology: new FormControl(this.currentUser.likesTechnology),
+      likesPolitics: new FormControl(this.currentUser.likesPolitics),
     });
   }
 
   onSubmit() {
-
+    this.userService.modifyUser(this.myForm.value).subscribe();
+    this.modalService.dismissAll('process finished');
   }
+
+
 }
