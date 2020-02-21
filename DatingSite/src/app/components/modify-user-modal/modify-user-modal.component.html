@@ -54,7 +54,7 @@
 <ng-template #searchpreference let-modal style="border: 1px solid black;">
   <div class="modal-header">
     <h4 class="modal-title" id="modal-basic-title3">Search preference</h4>
-    <button (click)="modal.close('Save click')" class="btn btn-outline-dark" type="button">Save</button>
+    <button (click)="onSubmit()" class="btn btn-outline-dark" type="button">Save</button>
   </div>
   <div class="modal-body">
     <form (submit)="onSubmit()" [formGroup]="myForm" class="text-center mt-3">
