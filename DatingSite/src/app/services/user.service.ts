@@ -40,10 +40,10 @@ export class UserService {
 
   //Lekérünk 1 usert az ID alapján
   public getUser(id: number): Observable<User> {
-    return this.http.get<UserResponse>(
-      this.SERVER_URL + 'rest/getUser/?id',
+    return this.http.get<User>(
+      this.SERVER_URL + 'rest/getUser/' + id,
       { withCredentials: true }
-    ).pipe(map(response => response.users[0]));
+    );
   }
 
   public getMyProfile(): Observable<User> {

@@ -35,7 +35,7 @@ export class ProfileComponentComponent implements OnInit {
           break;
         }
         case 'othersProfile':{
-          this.userService.getUser(2).subscribe(u => {
+          this.userService.getUser( +this.route.snapshot.paramMap.get('id') ).subscribe(u => {
             this.user = u;
             this.pageReady = true;
             if (u.gender == null) { this.isUsable = false; }
