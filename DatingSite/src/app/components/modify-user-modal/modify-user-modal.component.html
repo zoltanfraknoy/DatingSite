@@ -1,1 +1,81 @@
-<p>modify-user-modal works!</p>
+<ng-template #picture let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Upload new profile picture</h4>
+    <button (click)="modal.dismiss('Cross click')" aria-label="Close" class="close" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-12 pr-15">
+            <img alt="" class="img-center w-70" src="https://intense-meadow-41798.herokuapp.com{{currentUser.imgUrl}}">
+          </div>
+        </div>
+        <input
+          #fileInput
+          (change)="onFileChanged($event)" style="display: none"
+          type="file">
+      </div>
+      <div *ngIf="!uploadSuccess" class="section-field text-uppercase text-center mt-2">
+        <a class="button btn-dark btn-sm full-rounded">
+          <button (click)="fileInput.click()" class="transparent_button">
+            <span *ngIf="!pendingUpload"><i aria-hidden="true" class="fa fa-file-image-o"></i> import & upload</span>
+            <div *ngIf="pendingUpload" class="spinner-border text-warning" role="status">
+            </div>
+          </button>
+        </a>
+      </div>
+      <div *ngIf="uploadSuccess" class="section-field text-uppercase text-center mt-2">
+        <span style="font-size: 15px;">
+          <a class="successBubble"> <i class="fa fa-check"></i> </a>
+        </span>
+      </div>
+    </form>
+  </div>
+</ng-template>
+
+<ng-template #profilesetup let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title2">Profile settings</h4>
+    <button (click)="modal.dismiss('Cross click')" aria-label="Close" class="close" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <div class="input-group">
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button (click)="modal.close('Save click')" class="btn btn-outline-dark" type="button">Save</button>
+  </div>
+</ng-template>
+
+<ng-template #searchpreference let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title3">Search preference</h4>
+    <button (click)="modal.dismiss('Cross click')" aria-label="Close" class="close" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <div class="input-group">
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button (click)="modal.close('Save click')" class="btn btn-outline-dark" type="button">Save</button>
+  </div>
+</ng-template>
+
+<a class="button btn-dark btn-sm full-rounded " style="margin-right: 5px;"><button (click)="open(picture)" class="transparent_button"><span><i class="fa fa-camera"></i> Profile picture</span></button></a>
+<a class="button btn-dark btn-sm full-rounded " style="margin-right: 5px;"><button (click)="open(profilesetup)" class="transparent_button"><span><i class="fa fa-user"></i> Setup profile</span></button></a>
+<a class="button btn-dark btn-sm full-rounded " style="margin-right: 5px;"><button (click)="open(searchpreference)" class="transparent_button"><span><i class="fa fa-search"></i> Search preference</span></button></a>

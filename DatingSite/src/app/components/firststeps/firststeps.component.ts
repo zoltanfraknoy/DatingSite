@@ -42,12 +42,14 @@ export class FirststepsComponent implements OnInit {
   onFileChanged(event) {
     this.img = event.target.files[0];
     this.pendingUpload = true;
-    this.userService.uploadImg(this.img).subscribe();
-    this.userService.getMyProfile().subscribe( data => {
-      this.currentUser = data;
-      this.pendingUpload = false;
-      this.uploadSuccess = true;
-    });
+    this.userService.uploadImg(this.img).subscribe(data => {
+        this.pendingUpload = false;
+        this.uploadSuccess = true;
+      }, error => {
+        this.pendingUpload = false;
+        this.uploadSuccess = true;
+      }
+      );
   }
 
   onSubmit() {
@@ -63,6 +65,13 @@ export class FirststepsComponent implements OnInit {
       this.showErrorMessage = true;
       this.errorMessage = 'We don\'t know your gender. Please pick your gender for continue.';
     }
+    this.refreshUserData();
+  }
+
+  refreshUserData(): void {
+    this.userService.getMyProfile().subscribe( data => {
+      this.currentUser = data;
+    });
   }
 
   ngOnInit() {
@@ -73,5 +82,6 @@ export class FirststepsComponent implements OnInit {
       minAge: new FormControl(this.firstModify.minAge),
       maxAge: new FormControl(this.firstModify.maxAge)
     });
+    this.refreshUserData();
   }
 }
