@@ -1,18 +1,19 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import {AuthenticationService} from '../../services/authentication.service';
 import {UserService} from '../../services/user.service';
 import {User} from '../../interfaces/user';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-modify-user-modal',
   templateUrl: './modify-user-modal.component.html',
   styleUrls: ['./modify-user-modal.component.scss']
 })
-export class ModifyUserModalComponent {
+export class ModifyUserModalComponent implements OnInit {
   closeResult: string;
-
+  myForm: FormGroup;
   img: File;
   currentUser: User;
   pendingUpload: boolean;
@@ -60,5 +61,17 @@ export class ModifyUserModalComponent {
     } else {
       return  `with: ${reason}`;
     }
+  }
+
+  ngOnInit() {
+    this.myForm = new FormGroup({
+      interest: new FormControl(this.currentUser.interest),
+      minAge: new FormControl(this.currentUser.minAge),
+      maxAge: new FormControl(this.currentUser.maxAge)
+    });
+  }
+
+  onSubmit() {
+
   }
 }

@@ -16,3 +16,28 @@
   background: -webkit-gradient(linear, right top, left top, from(#0d6921), to(#15ad36));
   background: linear-gradient(-90deg, #0d6921, #15ad36);
 }
+
+.divider-3{
+  padding-bottom: 10px;
+}
+.row{
+  padding-bottom: 5px;
+}
+
+select{
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #c7b7cf;
+  height: 50px;
+  padding-left: 20px;
+  color: white;
+}
+
+.modal-body {
+  background: url(../../../assets/images/02.png);
+  border: none;
+}
+.modal-content{
+  border: none;
+}
