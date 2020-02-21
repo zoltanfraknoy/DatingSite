@@ -1,23 +1,42 @@
 <app-header-component></app-header-component>
 <section class="messages">
-  <!-- <input [(ngModel)]="searchText" placeholder="Search...">  -->
     <table class="table">
         <thead>
             <tr>
-                <th scope="col">Name</th>
+                <th scope="col">Partner name</th>
                 <th scope="col">Messages</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let c of conversations">
                 <td>{{ c.conversationMessages[0]?.partner }}</td>
-                <td>{{ c.conversationMessages[0]?.text }}</td>
-                <!-- <td><a routerLink="/conversation/{{c.id}}"> </a></td> -->
+                 <td>{{ c.conversationMessages[0]?.text }}</td> 
+               <!--  <button type="button" class="btn btn-danger reply-message" click="open">Message</button> -->
+                <!-- <td><a routerLink="/conversationMessages/{{c.conversationMessages[0]?.text}}">Messages </a></td>  -->
             </tr>
             <!-- <tr *ngIf="conversation.length==0">
                 <td colspan="2" style="text-align: center;">You haven't got message yet.</td>
             </tr> -->
         </tbody>
     </table>
+
+    <!-- Modal -->
+ <!--    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Messages</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+                <input type="text" id="textBox" />
+                <button type="button" class="btn btn-danger reply-message" data-dismiss="modal">Send</button>
+            </div>
+        </div>
+    </div> -->
 </section>
 <app-footer-component></app-footer-component>

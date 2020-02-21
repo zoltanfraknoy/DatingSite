@@ -23,6 +23,7 @@ import { ConversationComponent } from './components/conversation/conversation.co
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,8 @@ import { ConversationComponent } from './components/conversation/conversation.co
     FirststepsComponent,
     UserFilterComponent,
     ModifyUserModalComponent,
-    ConversationComponent
+    ConversationComponent,
+  
   ],
   imports: [
     BrowserModule,
