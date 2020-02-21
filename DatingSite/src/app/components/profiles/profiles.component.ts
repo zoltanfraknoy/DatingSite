@@ -24,9 +24,10 @@ export class ProfilesComponent implements OnInit, OnDestroy {
   }
   //Feliratkozunk a service getUsers metódusára és megkapunk egy csini users tömböt
   ngOnInit() {
-    this.usersSubscription = this.userService.getUsers().subscribe(
+    this.usersSubscription = this.userService.users.subscribe(
       users => {
         this.users = users;
+        console.log(users);
       }
     );
 
@@ -38,10 +39,7 @@ export class ProfilesComponent implements OnInit, OnDestroy {
 
   doSearch(filter: Filter) {
     //feliratkozni
-    this.userService.getUsers(filter).subscribe(users => {
-      this.users = users;
-    }
-    );
+    this.userService.getUsers(filter);
   }
   
 

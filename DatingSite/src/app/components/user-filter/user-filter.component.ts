@@ -61,12 +61,6 @@ export class UserFilterComponent implements OnInit {
 
     };
     this.search.emit(f);
-
-
-    console.log(f.lookingFor);
-    console.log(f.maxAge);
-    console.log(f.minAge);
-    console.log(f.numberPage);
   }
 
 }

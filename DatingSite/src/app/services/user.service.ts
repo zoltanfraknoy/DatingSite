@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class UserService {
 
-  private users: BehaviorSubject<User[]>;
+  public users: BehaviorSubject<User[]>;
   private readonly SERVER_URL = 'https://intense-meadow-41798.herokuapp.com/';
 
   constructor(private http: HttpClient, private router: Router) {
@@ -24,35 +24,24 @@ export class UserService {
     const json = JSON.stringify(usr);
     // írd át promiszra baszki
     const headers = new HttpHeaders().set('Content-Type', 'application/json; charset=utf-8');
-    this.http.post<UserResponse>(this.SERVER_URL + "rest/register" , json, {withCredentials: true, headers}).subscribe(
+    this.http.post<UserResponse>(this.SERVER_URL + "rest/register", json, { withCredentials: true, headers }).subscribe(
       data => { this.router.navigateByUrl('login/signUpSuccess'); }
     );
   }
 
   //Lekérjük a users tömböt
-  getUsers(filter?: Filter): BehaviorSubject<User[]> {
-    this.http.post<UserResponse>(
+  getUsers(filter?: Filter): void {
+    this.http.post<User[]>(
       this.SERVER_URL + "rest/profiles",
-      //szűrés hogyan??? default? maximalizálni a kapott válaszokat?
-      //kor -tól -ig, kit keres?, hányadiktól hányadik találatig
-      //minAge, maxAge, lookingFor, startingNumber, endingNumber
       filter,
       { withCredentials: true })
-      .subscribe(resp => this.updateUsers(resp));
-    return this.users;
-  }
-
-  //Ha a response sikeres frissítjük a változást
-  private updateUsers(response: UserResponse) {
-    if (response.success) {
-      this.users.next(response.users);
-    }
+      .subscribe(resp => this.users.next(resp));
   }
 
   //Lekérünk 1 usert az ID alapján
   public getUser(id: number): Observable<User> {
     return this.http.get<UserResponse>(
-      this.SERVER_URL + 'rest/?id=' + id,
+      this.SERVER_URL + 'rest/getUser/?id',
       { withCredentials: true }
     ).pipe(map(response => response.users[0]));
   }
